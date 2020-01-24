@@ -1,8 +1,37 @@
-/*Menu*/
-#menu {
-    /*background-image: url("../img/menu.jpg");*/
-    background-color: yellow;
+
+/* Configurando o HTML, Body */
+html{
+    scroll-behavior: smooth;
 }
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+
+/*Menu*/
+nav{
+    width: 100% !important;
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 99 !important;
+    transition: all .5s;
+}
+
+#menuHeader {
+    /*background-image: url("../img/menu.jpg");*/
+    background-color:rgb(245, 172, 75) !important;
+}
+
+.logo{
+    width: 10%;
+}
+
+.itenMenu{
+    margin-left: 50%;
+}
+
 
 /*Banner*/
 #banner {
@@ -13,15 +42,38 @@
 
 /*O que fazemos*/
 #sessao1 {
-    background-color: yellow;
+    font-family: Tahoma,'Segoe UI',  Geneva, Verdana, sans-serif;
+    background-color: rgb(245, 172, 75) !important;
     min-height: 300px;
+    width: 100%;
+    margin: 0%;
 }
+
+/* card o que fazemos */
+.card_fazemos{
+    width: 100% !important;
+    margin-left: 5%;
+}
+
+.textFazemos{
+    color: rgb(250, 250, 250) ;
+    margin-top: 2%;
+}
+
+/* Botão faça sua simulação */
+.btn-faca{
+    background-color: rgb(221, 95, 6);
+    margin-top: 50%;
+    margin-left: 25%;
+    color: rgb(250, 250, 250) ;
+}
+
 
 /*Passo-a-passo*/
 #sessao2 {
     /*background-image: url("../img/passo-a-passo.jpg");*/
     background-color: gray;
-    min-height: 1000px;
+    min-height: 100px;
 }
 
 /*Dados Estatisticos*/
