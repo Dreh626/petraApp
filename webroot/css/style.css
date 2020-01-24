@@ -1,0 +1,54 @@
+/*Menu*/
+#menu {
+    /*background-image: url("../img/menu.jpg");*/
+    background-color: yellow;
+}
+
+/*Banner*/
+#banner {
+    /*background-image: url("../img/banner.jpg");*/
+    background-color: gray;
+    min-height: 500px;
+}
+
+/*O que fazemos*/
+#sessao1 {
+    background-color: yellow;
+    min-height: 300px;
+}
+
+/*Passo-a-passo*/
+#sessao2 {
+    /*background-image: url("../img/passo-a-passo.jpg");*/
+    background-color: gray;
+    min-height: 1000px;
+}
+
+/*Dados Estatisticos*/
+#sessao3 {
+    background-color: yellow;
+    min-height: 200px;
+}
+
+/*Projetos Realizados*/
+#sessao4 {
+    background-color: orangered;
+    min-height: 500px;
+}
+
+/*Simulação*/
+#sessao5 {
+    /*background-image: url("../img/simulacao.jpg");*/
+    background-color: gray;
+    min-height: 600px;
+}
+
+/*Contato*/
+#sessao6 {
+    background-color: yellow;
+    min-height: 300px;
+}
+/*img{
+	max-width:100%;
+	height:auto;
+}*/
