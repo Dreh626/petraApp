@@ -74,7 +74,7 @@ $this->disableAutoLayout();
             <div class="container-fluid">
                 <div id="carousel" class="row carousel" alt="Ser Petra é ser inovador">
                     <div class="col-sm-12">
-                        <h1>Aqui vai o carousel</h1>
+                        <h1><p>Aqui vai o carousel</p></h1>
                     </div>
                 </div>
                 <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
