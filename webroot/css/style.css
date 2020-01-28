@@ -11,13 +11,13 @@ html, body{
 
 
 /*Menu*/
-nav{
+/* nav{
     width: 100% !important;
     position: fixed !important;
     top: 0 !important;
     z-index: 99 !important;
     transition: all .5s;
-}
+} */
 
 #menuHeader {
     /*background-image: url("../img/menu.jpg");*/
@@ -39,6 +39,7 @@ nav{
     background-color: gray;
     min-height: 500px;
 }
+
 
 /*O que fazemos*/
 #sessao1 {
