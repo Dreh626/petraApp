@@ -1,28 +1,33 @@
-
 /* Configurando o HTML, Body */
-html{
+html {
     scroll-behavior: smooth;
 }
 
-html, body{
+html,body {
     height: 100%;
     width: 100%;
 }
 
+body {
+    min-height: 75rem;
+    padding-top: 4.3rem;
+}
 
 /*Menu*/
-/* nav{
+header {
     width: 100% !important;
-    position: fixed !important;
-    top: 0 !important;
-    z-index: 99 !important;
-    transition: all .5s;
-} */
+}
 
 .menu {
-    /*background-image: url("../img/menu.jpg");*/
-    background-color:rgb(248, 182, 24) !important;
+    background-color: rgb(248, 182, 24) !important;
     color: rgb(250, 250, 250) !important;
+    width: 100%;
+}
+
+.menu-edit{
+    background-color: rgba(248, 182, 24, 0.6) !important;
+    border-bottom: 0.2px solid;
+    border-color:  rgb(248, 182, 24) !important;
 }
 
 .menu a {
@@ -30,9 +35,9 @@ html, body{
 }
 
 .menu button {
-    background-color:rgb(221, 95, 6) !important;
+    background-color: rgb(221, 95, 6) !important;
     color: rgb(250, 250, 250) !important;
-    margin: 10px 5px 10px 5px !important;
+    margin: 10px 0px !important;
     border: hidden !important;
 }
 
@@ -45,7 +50,7 @@ html, body{
 
 }
 
-.itemMenu{
+.itemMenu {
     margin-right: 25px;
 }
 
@@ -54,14 +59,21 @@ html, body{
     max-height: 25px;
 }
 
+/* Conteudo Main */
+main{
+    /* padding-top: 4.3rem; */
+}
+
 .carousel {
     min-height: 600px;
 }
 
 
+/* Fim do arquivo main */
+
 /*O que fazemos*/
 .o-que-fazemos {
-    font-family: Tahoma,'Segoe UI',  Geneva, Verdana, sans-serif;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
     background-color: rgb(248, 182, 24) !important;
     min-height: 300px;
     color: rgb(250, 250, 250);
@@ -72,7 +84,7 @@ html, body{
 }
 
 /* Botão faça sua simulação */
-.o-que-fazemos button{
+.o-que-fazemos button {
     background-color: rgb(221, 95, 6) !important;
     color: rgb(250, 250, 250);
     float: right;
@@ -101,18 +113,25 @@ html, body{
     min-height: 500px;
 }
 
+.projetos-realizados {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    margin-left: 33.3%;
+    color: rgb(250, 250, 250);
+}
+
 /*Simulação*/
 .simulacao {
-    /*background-image: url("../img/simulacao.jpg");*/
-    background-color: gray;
+    background-image: url("../img/simulacao.svg");
+    width: 100%;
     min-height: 600px;
 }
 
 /*Contato*/
 .contato {
-    font-family: Tahoma,'Segoe UI',  Geneva, Verdana, sans-serif;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
     background-color: rgb(248, 182, 24) !important;
     min-height: 300px;
+    width: 100%;
 }
 
 .contato ul {

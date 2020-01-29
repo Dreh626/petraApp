@@ -13,7 +13,6 @@ $this->disableAutoLayout();
 <!DOCTYPE html>
 <html>
 
-<<<<<<< HEAD
 <head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,42 +35,38 @@ $this->disableAutoLayout();
 
 <body>
     <header>
-        <!-- <div class="container-fluid">
-                <div id="menu" class="row" alt="Menu">
-                    <div class="col-sm-12">
-                        <p>MENU</p>
-                    </div>
-            </div> -->
-        <nav id="menuHeader" class="navbar navbar-expand-lg navbar-light bg-light menu sticky-top">
-
-
-            <a class="nav-link" href="#"> <img src="" alt="Imagem Logo"></a>
+        <nav id="menuHeader" class="navbar navbar-expand-lg navbar-light bg-light menu menu-edit fixed-top">
+            <a class="nav-link" href="#"><img src="" alt="logotipo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto itenMenu">
-
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto itemMenu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#sessao1">O que fazemos?</a>
+                        <a class="nav-link" href="#o-que-fazemos">O que fazemos?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sessao2">O passo-a-passo</a>
+                        <a class="nav-link" href="#o-passo-a-passo">O passo-a-passo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sessao3">Projetos</a>
+                        <a class="nav-link" href="#dados">Dados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#sessao4">Contatos</a>
+                        <a class="nav-link" href="#projetos">Projetos Realizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#simulacao">Simulação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-sm btn-outline-secondary">Faça sua simulação</button>
                     </li>
                 </ul>
-                <ul class="navbar-nav mr-auto>
-                        <li class=" nav-item">
-                    <a class="nav-link" href=""><img src="https://ftp.mastertech.com.br/Esta%C3%A7%C3%A3o%20Hack/Turma%204/Dia%202/Luan%20Gustavo%20Nikolly%20Lucas%20Camila/login.png" style="height:40px; width:40px;" alt="Login Painel" placeholder="Login"></a>
-                    </li>
-                </ul>
-                <button class="btn btn-sm btn-outline-secondary">Faça sua simulação</button>
             </div>
         </nav>
     </header>
@@ -79,7 +74,7 @@ $this->disableAutoLayout();
         <div class="container-fluid">
             <!-- Carousel -->
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <ol class=" carousel carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
@@ -119,158 +114,181 @@ $this->disableAutoLayout();
             </div>
             <!-- Fim Carousel -->
 
-            <div id="sessao1" class="row" alt="O que fazemos?">
-                <div class="row card_fazemos">
-                    <!-- <div class="col-sm-1"></div>  verificar porque estava sem uso-->
-                    <div class="col-sm-5 textFazemos">
-                        <p>
-                            <h1>O que fazemos?</h1>
-                        </p>
-                        <h6>
-                            <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis de energia solar fotovoltaica em sua casa ou empresa.</p>
-                            <p>Nós temos a missão de levar uma energia limpa e inesgotável para as casas dos brasileiros, contribuindo com o meio ambiente,
-                                com a economia de cada família e com o desenvolvimento do país.</p>
-                        </h6>
-=======
-        <?= $this->fetch('meta') ?>
-        <?= $this->fetch('css') ?>
-        <?= $this->fetch('script') ?>
-    </head>
-    <body>
-        <header>
-            <nav id="menuHeader" class="navbar navbar-expand-lg navbar-light bg-light menu">
-                <div class="navbar-nav mr-auto" id="navbarSupportedContent">
-                    <a class="nav-link" href="#"><img src="" alt="logotipo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
+                <div class="col-sm-7">
+                    <h1>
+                        <p>O que fazemos?</p>
+                    </h1>
+                    <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis
+                        de energia solar fotovoltaica em sua casa ou empresa.
+                        <br><br>
+                        Nós temos a missão de levar uma energia limpa e inesgotável para as casas
+                        dos brasileiros, contribuindo com o meio ambiente, com a economia de cada
+                        família e com o desenvolvimento do país.
+                    </p>
                 </div>
-                <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                    <ul class="navbar-nav ml-auto itemMenu">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#o-que-fazemos">O que fazemos?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#passo-a-passo">O passo-a-passo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#dados">Dados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projetos">Projetos Realizados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#simulacao">Simulação</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-sm btn-outline-secondary">Faça sua simulação</button>
-                        </li>
-                    </ul>
+                <div class="col-sm-5">
+                    <button class="btn btn-sm btn-outline-secondary">Faça uma simulação em sua casa ou empresa</button>
                 </div>
-            </nav>
-        </header>
-        <main>
-            <div class="container-fluid">
-                <div id="carousel" class="row carousel" alt="Ser Petra é ser inovador">
-                    <div class="col-sm-12">
-                        <h1><p>Aqui vai o carousel</p></h1>
+                <!-- <div class="col-sm-1"></div> -->
+            </div>
+            <div id="o-passo-a-passo" class="row passo-a-passo" alt="O passo a passo">
+                <div class="col-sm-7">
+                    <h1>
+                        <p>Passo a passo</p>
+                    </h1>
+                </div>
+            </div>
+
+            <div id="dados" class="row dados" alt="Dados Estatisticos">
+                <!-- <div class="col-sm-2"></div> -->
+                <div class="col-sm-2">
+                    <p>20 toneladas de CO2 poupados.</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>5.000 kw de energia gerada.</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>2,5 milhões economizados por nossos clientes.</p>
+                </div>
+                <div class="col-sm-2">
+                    <p>60 estudos realizados</p>
+                </div>
+                <!-- <div class="col-sm-2"></div> -->
+            </div>
+
+            <div id="projetos" class="row projetos" alt="Projetos realizados">
+                <h1 class="projetos-realizados">Projetos realizados</h1>
+                <!-- Inicio dos cards de projetos -->
+
+                <!-- <div class="album py-5 bg-light"> -->
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg>
+                            </div>
+                            <p class="card-text">Araraquara -SP</p>
+                        </div>
+                        <!-- São Carlos -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg>
+                            </div>
+                            <p class="card-text">São Carlos -SP</p>
+                        </div>
+                        <!-- Sorocaba  -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg>
+                            </div>
+                            <p class="card-text">Sorocaba -SP</p>
+                        </div>
+                        <!-- Ribeirão Preto -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg>
+                            </div>
+                            <p class="card-text">Ribeirão Preto -SP</p>
+                        </div>
+                        <!-- Campinas -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg>
+                            </div>
+                            <p class="card-text">Campinas -SP</p>
+                        </div>
+                        <!-- Matão -->
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                                </svg>
+                            </div>
+                            <p class="card-text">Matão -SP</p>
+                        </div>
                     </div>
                 </div>
-                <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
-                    <div class="col-sm-7">
-                        <h1><p>O que fazemos?</p></h1>
-                        <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis 
-                            de energia solar fotovoltaica em sua casa ou empresa.
-                            <br><br>
-                            Nós temos a missão de levar uma energia limpa e inesgotável para as casas 
-                            dos brasileiros, contribuindo com o meio ambiente, com a economia de cada 
-                            família e com o desenvolvimento do país.
-                        </p>
->>>>>>> 7c550595c6d0f4a5451e099e26e12299c99ff25d
-                    </div>
-                    <div class="col-sm-5">
-                        <button class="btn btn-sm btn-outline-secondary">Faça uma simulação em sua casa ou empresa</button>
-                    </div>
-<<<<<<< HEAD
-                    <!-- <div class="col-sm-1"></div> -->
+            </div>
+            <!-- </div> -->
+
+
+            <!-- fim dos cards de projetos -->
+        </div>
+        <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
+            <p>Simulação</p>
+
+            <div class="col-sm-4">
+                <div class="texto">
+                    <h2>
+                        Faça Sua Simulação e econimize até 95% em sua conta de energia
+                    </h2>
                 </div>
             </div>
-            <div id="sessao2" class="row" alt="O passo-a-passo da Petra">
-                <div class="col-sm-12">
-                    <img src="../img/" />
-=======
->>>>>>> 7c550595c6d0f4a5451e099e26e12299c99ff25d
+            <div class="col-sm-6">
+                <div class="formulario">
+                    <!-- Inicio do formulario -->
+                    <form>
+                        <div class="form-group">
+                            <label for="inputAddress">Nome</label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">E-mail</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Seu E-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Celular</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Seu celular">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Seu endereço">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Tipo de Instalação</label>
+                            <input type="text" class="form-control" id="inputTipoInstalacao" placeholder="O tipo de instalação desejada">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Metragem da residência/empresa:</label>
+                            <input type="text" class="form-control" id="inputArea" placeholder="Metragem do projeto">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">Quanta paga em média na sua conta atualmente</label>
+                            <input type="text" class="form-control" id="inputMediaConta" placeholder="Valor da conta atual">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
                 </div>
-                <div id="passo-a-passo" class="row passo-a-passo" alt="O passo-a-passo da Petra">
-                    <div class="col-sm-12">
-                        <img src="./img/passo-a-passo.svg" />
-                    </div>
-                </div>
-<<<<<<< HEAD
-                <div class="col-sm-2"></div>
             </div>
-            <div id="sessao4" class="row" alt="Projetos realizados">
-                <p>Projetos realizados</p>
-            </div>
-            <div id="sessao5" class="row" alt="Faça sua simulação">
-                <p>Simulação</p>
-            </div>
-            <div id="sessao6" class="row" alt="Contato">
-                <p>Contato</p>
-            </div>
+            <!-- final do formulario -->
         </div>
     </main>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <footer>
+        <div id="contato" class="row contato" alt="Contato">
+            <div class="col-sm-4">
+                <ul>
+                    <li>
+                        <h2>Fale Conosco:<h2>
+                    </li>
+                    <li><img src="./img/email-icon.png" alt="E-mail" /> emailcontato@petra.com.br</li>
+                    <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DDD) 1234-5678</li>
+                    <li><img src="./img/whatsapp-icon.png" alt="Whatsapp" /> (DDD) 98765-4321</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
-=======
-                <div id="dados" class="row dados" alt="Dados Estatisticos">
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-2">
-                        <p>20 toneladas de CO2 poupados.</p>
-                    </div>
-                    <div class="col-sm-2">
-                        <p>5.000 kw de energia gerada.</p>
-                    </div>
-                    <div class="col-sm-2">
-                        <p>2,5 milhões economizados por nossos clientes.</p>
-                    </div>
-                    <div class="col-sm-2">
-                        <p>60 estudos realizados</p>
-                    </div>
-                        <div class="col-sm-2"></div>
-                    </div>
-                </div>
-                <div id="projetos" class="row projetos" alt="Projetos realizados">
-                    <p>Projetos realizados</p>
-                </div>
-                <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
-                    <p>Simulação</p>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div id="contato" class="row contato" alt="Contato">
-                <div>
-                    <ul>
-                        <li><h2>Fale Conosco:<h2></li>
-                        <li><img src="email-icon.png" alt="E-mail"/>  emailcontato@petra.com.br</li>
-                        <li><img src="telefone-icon.png" alt="Telefone"/>  (DDD) 1234-5678</li>
-                        <li><img src="whatsapp-icon.png" alt="Whatsapp"/>  (DDD) 98765-4321</li>
-                    </ul>                            
-                </div>
-            </div>
-        </footer>
-    </body>
-</html>
->>>>>>> 7c550595c6d0f4a5451e099e26e12299c99ff25d
