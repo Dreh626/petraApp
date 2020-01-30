@@ -36,7 +36,9 @@ $this->disableAutoLayout();
 <body>
     <header>
         <nav id="menuHeader" class="navbar navbar-expand-lg navbar-light bg-light menu menu-edit fixed-top">
-            <a class="nav-link" href="#"><img src="" alt="logotipo"></a>
+            <a class="nav-link" href="#">
+                <img src="../img/logotipo.png" alt="logotipo"/>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,15 +50,15 @@ $this->disableAutoLayout();
                     <li class="nav-item">
                         <a class="nav-link" href="#o-passo-a-passo">O passo-a-passo</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#dados">Dados</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#projetos">Projetos Realizados</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#simulacao">Simulação</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
@@ -81,14 +83,14 @@ $this->disableAutoLayout();
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../img/Banner 1.svg" class="d-block w-100" alt="...">
+                        <img src="../img/banner1.svg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="../img/Banner 2.svg" class="d-block w-100" alt="...">
+                        <img src="../img/banner2.svg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -96,7 +98,7 @@ $this->disableAutoLayout();
                     </div>
 
                     <div class="carousel-item">
-                        <img src="../img/Banner 3.svg" class="d-block w-100" alt="...">
+                        <img src="../img/banner3.svg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
@@ -115,10 +117,8 @@ $this->disableAutoLayout();
             <!-- Fim Carousel -->
 
             <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
-                <div class="col-sm-7">
-                    <h1>
-                        <p>O que fazemos?</p>
-                    </h1>
+                <div class="col-sm-6">
+                    <h1><p>O que fazemos?</p></h1>
                     <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis
                         de energia solar fotovoltaica em sua casa ou empresa.
                         <br><br>
@@ -127,40 +127,55 @@ $this->disableAutoLayout();
                         família e com o desenvolvimento do país.
                     </p>
                 </div>
-                <div class="col-sm-5">
-                    <button class="btn btn-sm btn-outline-secondary">Faça uma simulação em sua casa ou empresa</button>
+                <div class="col-sm-2 text-center"></div>
+                <div class="col-sm-3 text-center">
+                    <button class="btn btn-sm btn-outline-secondary">
+                            Faça uma simulação<br>
+                            em sua casa ou empresa
+                    </button>
                 </div>
-                <!-- <div class="col-sm-1"></div> -->
+                <div class="col-sm-1 text-center"></div>
             </div>
+
             <div id="o-passo-a-passo" class="row passo-a-passo" alt="O passo a passo">
-                <div class="col-sm-7">
-                    <h1>
-                        <p>Passo a passo</p>
-                    </h1>
+                <div class="col-sm-12">
+                    <img src="../img/passo-a-passo.jpg" alt="passo-a-passo" />
                 </div>
+            </div>
+            <div id="quero-um-projeto" class="row quero-um-projeto" alt="Quero realizar um projeto">
+                <div class="col-sm-3 text-center"></div>
+                <div class="col-sm-6 text-center">
+                    <button class="btn btn-sm btn-outline-secondary">Quero realizar um projeto.</button>
+                </div>
+                <div class="col-sm-3 text-center"></div>
             </div>
 
             <div id="dados" class="row dados" alt="Dados Estatisticos">
-                <!-- <div class="col-sm-2"></div> -->
-                <div class="col-sm-2">
-                    <p>20 toneladas de CO2 poupados.</p>
+                <div class="col-sm-2 text-center"></div>
+                <div class="col-sm-2 text-center">
+                    <h1>20</h1>
+                    <p> toneladas de CO2 poupados.</p>
                 </div>
-                <div class="col-sm-2">
-                    <p>5.000 kw de energia gerada.</p>
+                <div class="col-sm-2 text-center">
+                    <h1>5.000</h1>
+                    <p>kw de energia gerada.</p>
                 </div>
-                <div class="col-sm-2">
-                    <p>2,5 milhões economizados por nossos clientes.</p>
+                <div class="col-sm-2 text-center">
+                    <h1>2,5</h1>
+                    <p>milhões economizados por nossos clientes.</p>
                 </div>
-                <div class="col-sm-2">
-                    <p>60 estudos realizados</p>
+                <div class="col-sm-2 text-center">
+                    <h1>60</h1>
+                    <p>estudos realizados</p>
                 </div>
-                <!-- <div class="col-sm-2"></div> -->
+                <div class="col-sm-2 text-center"></div>
             </div>
 
             <div id="projetos" class="row projetos" alt="Projetos realizados">
-                <h1 class="projetos-realizados">Projetos realizados</h1>
+                <div class="col-sm-12 text-center">
+                    <h1><p>Projetos realizados</p></h1>
+                </div>
                 <!-- Inicio dos cards de projetos -->
-
                 <!-- <div class="album py-5 bg-light"> -->
                 <div class="container">
 
@@ -171,7 +186,7 @@ $this->disableAutoLayout();
                                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                                 </svg>
                             </div>
-                            <p class="card-text">Araraquara -SP</p>
+                            <p class="card-text text-center">Araraquara -SP</p>
                         </div>
                         <!-- São Carlos -->
                         <div class="col-md-4">
@@ -180,7 +195,7 @@ $this->disableAutoLayout();
                                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                                 </svg>
                             </div>
-                            <p class="card-text">São Carlos -SP</p>
+                            <p class="card-text text-center">São Carlos -SP</p>
                         </div>
                         <!-- Sorocaba  -->
                         <div class="col-md-4">
@@ -189,7 +204,7 @@ $this->disableAutoLayout();
                                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                                 </svg>
                             </div>
-                            <p class="card-text">Sorocaba -SP</p>
+                            <p class="card-text text-center">Sorocaba -SP</p>
                         </div>
                         <!-- Ribeirão Preto -->
                         <div class="col-md-4">
@@ -198,7 +213,7 @@ $this->disableAutoLayout();
                                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                                 </svg>
                             </div>
-                            <p class="card-text">Ribeirão Preto -SP</p>
+                            <p class="card-text text-center">Ribeirão Preto -SP</p>
                         </div>
                         <!-- Campinas -->
                         <div class="col-md-4">
@@ -207,7 +222,7 @@ $this->disableAutoLayout();
                                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                                 </svg>
                             </div>
-                            <p class="card-text">Campinas -SP</p>
+                            <p class="card-text text-center">Campinas -SP</p>
                         </div>
                         <!-- Matão -->
                         <div class="col-md-4">
@@ -216,28 +231,25 @@ $this->disableAutoLayout();
                                     <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
                                 </svg>
                             </div>
-                            <p class="card-text">Matão -SP</p>
+                            <p class="card-text text-center">Matão-SP</p>
                         </div>
                     </div>
                 </div>
+                <!-- fim dos cards de projetos -->
             </div>
-            <!-- </div> -->
+            <!-- fim <div> projetos -->
 
-
-            <!-- fim dos cards de projetos -->
-        </div>
-        <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
-            <p>Simulação</p>
-
-            <div class="col-sm-4">
-                <div class="texto">
-                    <h2>
-                        Faça Sua Simulação e econimize até 95% em sua conta de energia
-                    </h2>
+            <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
+                <div class="col-sm-4">
+                        <h2>
+                            <p>Faça Sua Simulação<br>
+                                e econimize até <br>
+                                95% em sua conta <br>
+                                de energia.
+                            </p>
+                        </h2>
                 </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="formulario">
+                <div class="col-sm-7">
                     <!-- Inicio do formulario -->
                     <form>
                         <div class="form-group">
@@ -271,9 +283,11 @@ $this->disableAutoLayout();
                         <button type="submit" class="btn btn-primary">Enviar</button>
                     </form>
                 </div>
+                <div class="col-sm-1"></div>
             </div>
-            <!-- final do formulario -->
+            <!-- final <div> simulacao -->
         </div>
+        <!-- final <div> container-fluid -->
     </main>
     <footer>
         <div id="contato" class="row contato" alt="Contato">
@@ -282,9 +296,9 @@ $this->disableAutoLayout();
                     <li>
                         <h2>Fale Conosco:<h2>
                     </li>
-                    <li><img src="./img/email-icon.png" alt="E-mail" /> emailcontato@petra.com.br</li>
-                    <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DDD) 1234-5678</li>
-                    <li><img src="./img/whatsapp-icon.png" alt="Whatsapp" /> (DDD) 98765-4321</li>
+                    <li><img src="./img/email-icon.png" alt="E-mail" /> contato@petrasolar.com.br</li>
+                    <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DD) xxxx-xxxx</li>
+                    <li><img src="./img/whatsapp-icon.png" alt="Whatsapp" /> (16) 99139-3556</li>
                 </ul>
             </div>
         </div>

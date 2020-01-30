@@ -13,13 +13,15 @@ body {
     padding-top: 4.3rem;
 }
 
-/*Menu*/
+
 header {
     width: 100% !important;
 }
 
+/*Menu*/
 .menu {
     background-color: rgb(248, 182, 24) !important;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
     color: rgb(250, 250, 250) !important;
     width: 100%;
 }
@@ -34,6 +36,10 @@ header {
     color: rgb(250, 250, 250) !important;
 }
 
+.menu a img {
+    width: 200px;
+}
+
 .menu button {
     background-color: rgb(221, 95, 6) !important;
     color: rgb(250, 250, 250) !important;
@@ -41,6 +47,7 @@ header {
     border: hidden !important;
 }
 
+/* Itens do Menu*/
 .itemMenu li {
     padding: 10px 10px 10px 10px;
 }
@@ -63,12 +70,6 @@ header {
 main{
     /* padding-top: 4.3rem; */
 }
-
-.carousel {
-    min-height: 600px;
-}
-
-
 /* Fim do arquivo main */
 
 /*O que fazemos*/
@@ -83,47 +84,82 @@ main{
     margin: 30px 30px 30px 30px;
 }
 
-/* Botão faça sua simulação */
+/* Botao faca sua simulacao */
 .o-que-fazemos button {
     background-color: rgb(221, 95, 6) !important;
     color: rgb(250, 250, 250);
     float: right;
-    margin: 120px 120px 0 0;
-    max-width: 180px;
+    margin: 60px;
+    width: 210px;
+    height: 50px;
     border: hidden !important;
 }
 
 
 /*Passo-a-passo*/
-.passo-a-passo {
-    /*background-image: url("../img/passo-a-passo.jpg");*/
-    background-color: gray;
-    min-height: 100px;
+.passo-a-passo img {
+	width:100%;
+	height:auto;
 }
+
+/*Botao quero um projeto*/
+.quero-um-projeto button{
+    background-color: rgb(221, 95, 6) !important;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    color:rgb(250, 250, 250);
+    text-align: center;
+    font-weight: bold;
+    border: hidden !important;
+    margin-bottom: 30px;
+    padding: 20px 40px;
+}
+
 
 /*Dados Estatisticos*/
 .dados {
-    background-color: yellow;
-    min-height: 200px;
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    background-color: rgb(248, 182, 24) !important;
+    color: rgb(250, 250, 250);
+    padding: 20px;
 }
 
 /*Projetos Realizados*/
 .projetos {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
     background-color: orangered;
     min-height: 500px;
 }
 
-.projetos-realizados {
+.projetos p {
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
-    margin-left: 33.3%;
     color: rgb(250, 250, 250);
+    margin-left: 33.3%;
+    margin: 30px 30px 30px 30px;
 }
 
 /*Simulação*/
 .simulacao {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    color: rgb(250, 250, 250);
     background-image: url("../img/simulacao.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 100%;
     min-height: 600px;
+}
+
+.simulacao p {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    color: rgb(250, 250, 250);
+    margin: 30px 30px 30px 30px;
+    padding-top: 150px;
+    text-align: right;
+}
+
+.simulacao form {
+    font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+    color: rgb(250, 250, 250);
+    margin: 20px;
 }
 
 /*Contato*/
@@ -135,7 +171,7 @@ main{
 }
 
 .contato ul {
-    margin: 30px 30px 30px 30px;
+    margin-top: 30px;
     color: rgb(250, 250, 250);
 }
 

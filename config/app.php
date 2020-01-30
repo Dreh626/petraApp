@@ -325,18 +325,15 @@ return [
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
     	],
 	
-	'debug_kit' => [
+	    'debug_kit' => [
         	'className' => 'Cake\Database\Connection',
         	'driver' => 'Cake\Database\Driver\Mysql',
 	        'persistent' => false,
-        	'host' => 'localhost',
-	        'port' => '8765',
-	
+        	'host' => 'localhost',	
         	//'port' => 'non_standard_port_number',
 	        'username' => 'magdiel',
        		'password' => 'magdiel',
 	        'database' => 'petraBD',
-
         	//'encoding' => 'utf8mb4',
 	        'timezone' => 'UTC',
        		'flags' => [],
@@ -344,7 +341,7 @@ return [
 	        'log' => false,'quoteIdentifiers' => false,
 	
 	        'url' => env('DATABASE_URL', null),
-	],
+	    ],
     ],
 
     /*
