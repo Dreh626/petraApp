@@ -36,8 +36,8 @@ $this->disableAutoLayout();
 <body>
     <header>
         <nav id="menuHeader" class="navbar navbar-expand-lg navbar-light bg-light menu menu-edit fixed-top">
-            <a class="nav-link" href="#">
-                <img src="../img/logotipo.png" alt="logotipo"/>
+            <a class="nav-link img_logo" href="#">
+                <img src="../img/logotipo.png" alt="logotipo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -63,10 +63,10 @@ $this->disableAutoLayout();
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
+                        <a class="nav-link img_login" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-sm btn-outline-secondary">Faça sua simulação</button>
+                        <a class="btn btn-sm btn-outline-secondary" href="#simulacao">Faça sua simulação</a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@ $this->disableAutoLayout();
     <main>
         <div class="container-fluid">
             <!-- Carousel -->
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="3000"  data-ride="carousel">
                 <ol class=" carousel carousel-indicators">
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -85,8 +85,12 @@ $this->disableAutoLayout();
                     <div class="carousel-item active">
                         <img src="../img/banner1.svg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <div class="texto_slide_principal col-sm-4" >
+                                <h1><u>Ser Petra</u> <strong>é ser ecônomico</strong><h1>
+                            </div>
+                            <div class="Texto_secundario col-sm-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem dolore quisquam quo obcaecati repudiandae facere. Magni vel, itaque inventore aperiam illum doloremque obcaecati explicabo ipsa quidem quasi impedit commodi.
+                            </div>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -118,7 +122,9 @@ $this->disableAutoLayout();
 
             <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
                 <div class="col-sm-6">
-                    <h1><p>O que fazemos?</p></h1>
+                    <h1>
+                        <p>O que fazemos?</p>
+                    </h1>
                     <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis
                         de energia solar fotovoltaica em sua casa ou empresa.
                         <br><br>
@@ -130,8 +136,8 @@ $this->disableAutoLayout();
                 <div class="col-sm-2 text-center"></div>
                 <div class="col-sm-3 text-center">
                     <button class="btn btn-sm btn-outline-secondary">
-                            Faça uma simulação<br>
-                            em sua casa ou empresa
+                        Faça uma simulação<br>
+                        em sua casa ou empresa
                     </button>
                 </div>
                 <div class="col-sm-1 text-center"></div>
@@ -166,14 +172,16 @@ $this->disableAutoLayout();
                 </div>
                 <div class="col-sm-2 text-center">
                     <h1>60</h1>
-                    <p>estudos realizados</p>
+                    <p>Estudos realizados</p>
                 </div>
                 <div class="col-sm-2 text-center"></div>
             </div>
 
             <div id="projetos" class="row projetos" alt="Projetos realizados">
                 <div class="col-sm-12 text-center">
-                    <h1><p>Projetos realizados</p></h1>
+                    <h1>
+                        <p>Projetos realizados</p>
+                    </h1>
                 </div>
                 <!-- Inicio dos cards de projetos -->
                 <!-- <div class="album py-5 bg-light"> -->
@@ -238,16 +246,16 @@ $this->disableAutoLayout();
                 <!-- fim dos cards de projetos -->
             </div>
             <!-- fim <div> projetos -->
-
+            <div class="container"></div>
             <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
                 <div class="col-sm-4">
-                        <h2>
-                            <p>Faça Sua Simulação<br>
-                                e econimize até <br>
-                                95% em sua conta <br>
-                                de energia.
-                            </p>
-                        </h2>
+                    <h2>
+                        <p>Faça Sua Simulação<br>
+                            e econimize até <br>
+                            95% em sua conta <br>
+                            de energia.
+                        </p>
+                    </h2>
                 </div>
                 <div class="col-sm-7">
                     <!-- Inicio do formulario -->
@@ -280,10 +288,10 @@ $this->disableAutoLayout();
                             <label for="inputAddress">Quanta paga em média na sua conta atualmente</label>
                             <input type="text" class="form-control" id="inputMediaConta" placeholder="Valor da conta atual">
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-envia btn-primary">Enviar</button>
                     </form>
                 </div>
-                <div class="col-sm-1"></div>
+                <!-- <div class="col-sm-1"></div> -->
             </div>
             <!-- final <div> simulacao -->
         </div>

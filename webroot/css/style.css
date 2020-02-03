@@ -15,10 +15,16 @@ body {
 
 
 header {
+    height: auto;
     width: 100% !important;
 }
 
 /*Menu*/
+.navbar{
+    height: auto;
+    padding: 0% !important;
+}
+
 .menu {
     background-color: rgb(248, 182, 24) !important;
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
@@ -26,25 +32,38 @@ header {
     width: 100%;
 }
 
-.menu-edit{
-    background-color: rgba(248, 182, 24, 0.6) !important;
-    border-bottom: 0.2px solid;
-    border-color:  rgb(248, 182, 24) !important;
+.img_logo{
+
+    height: 50px;
 }
 
 .menu a {
+    padding: 0%;
+    height: auto;
+    width: auto;
     color: rgb(250, 250, 250) !important;
 }
 
 .menu a img {
-    width: 200px;
+    height: 100%;
+    width: 65%;
 }
 
-.menu button {
+/* Botão Menu */
+.menu .btn {
     background-color: rgb(221, 95, 6) !important;
     color: rgb(250, 250, 250) !important;
     margin: 10px 0px !important;
     border: hidden !important;
+    height: 60%;
+    width: 150px;
+    padding: 1%;
+}
+/* hover botão menu */
+.menu .btn:hover{
+    background-color: rgb(185, 82, 8) !important;
+    border-radius: 2px solid;
+    border-color: rgb(221, 95, 6) !important;
 }
 
 /* Itens do Menu*/
@@ -53,6 +72,7 @@ header {
 }
 
 .itemMenu li a {
+    margin-top: 3% !important;
     color: rgb(250, 250, 250) !important;
 
 }
@@ -66,12 +86,6 @@ header {
     max-height: 25px;
 }
 
-/* Conteudo Main */
-main{
-    /* padding-top: 4.3rem; */
-}
-/* Fim do arquivo main */
-
 /*O que fazemos*/
 .o-que-fazemos {
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
@@ -80,6 +94,13 @@ main{
     color: rgb(250, 250, 250);
 }
 
+.img_login{
+    height: 50px !important;
+    width: 65px !important;
+}
+
+
+/* Inicio o que fazemos */
 .o-que-fazemos p {
     margin: 30px 30px 30px 30px;
 }
@@ -162,6 +183,14 @@ main{
     margin: 20px;
 }
 
+.btn-envia{
+    background-color:rgb(248, 182, 24) !important;
+    color: rgb(250, 250, 250) !important;
+    width: 150px;
+    margin-left: 37.5%;
+    border: none;
+}
+
 /*Contato*/
 .contato {
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
@@ -183,4 +212,28 @@ main{
 .contato ul li img {
     max-height: 20px;
     max-width: 20px;
+}
+
+/* CSS telas menores */
+@media (max-width: 730px) {
+    header{
+        padding: 0% !important;
+        height: auto;
+    }
+
+    .navbar{
+        margin: 0% !important;
+        padding: 0% !important;
+    }
+    .img_logo{
+        height: auto;
+        margin-top: auto;
+        width: 72% !important;
+    }
+    .navbar-toggler{
+        margin-top: auto;
+    }
+
+
+
 }
