@@ -35,10 +35,6 @@
                     <td><?= h($usuario->senha) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Foto') ?></th>
-                    <td><?= h($usuario->foto) ?></td>
-                </tr>
-                <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($usuario->id) ?></td>
                 </tr>

@@ -16,7 +16,6 @@
                     <th><?= $this->Paginator->sort('email') ?></th>
                     <th><?= $this->Paginator->sort('login') ?></th>
                     <th><?= $this->Paginator->sort('senha') ?></th>
-                    <th><?= $this->Paginator->sort('foto') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
@@ -28,7 +27,6 @@
                     <td><?= h($usuario->email) ?></td>
                     <td><?= h($usuario->login) ?></td>
                     <td><?= h($usuario->senha) ?></td>
-                    <td><?= h($usuario->foto) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $usuario->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $usuario->id]) ?>

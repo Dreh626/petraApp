@@ -72,12 +72,6 @@ class UsuariosTable extends Table
             ->requirePresence('senha', 'create')
             ->notEmptyString('senha');
 
-        $validator
-            ->scalar('foto')
-            ->maxLength('foto', 255)
-            ->requirePresence('foto', 'create')
-            ->notEmptyString('foto');
-
         return $validator;
     }
 

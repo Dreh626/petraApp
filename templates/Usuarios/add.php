@@ -21,7 +21,6 @@
                     echo $this->Form->control('email');
                     echo $this->Form->control('login');
                     echo $this->Form->control('senha');
-                    echo $this->Form->control('foto');
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Submit')) ?>

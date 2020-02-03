@@ -5,18 +5,19 @@ namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
-use Cake\Auth\DefaultPasswordHasher;
-
 /**
- * Usuario Entity
+ * Interessado Entity
  *
  * @property int $id
  * @property string $nome
  * @property string $email
- * @property string $login
- * @property string $senha
+ * @property string $celular
+ * @property string $endereco
+ * @property string $tipo_instalacao
+ * @property string $metragem
+ * @property string $conta_atual
  */
-class Usuario extends Entity
+class Interessado extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -30,14 +31,10 @@ class Usuario extends Entity
     protected $_accessible = [
         'nome' => true,
         'email' => true,
-        'login' => true,
+        'celular' => true,
+        'endereco' => true,
+        'tipo_instalacao' => true,
+        'metragem' => true,
+        'conta_atual' => true,
     ];
-
-    protected $_hidden = [
-        'senha'
-    ];
-
-    protected function _setPassword($senha){
-        return ( new DefaultPasswordHasher )->hash($senha);
-    }
 }
