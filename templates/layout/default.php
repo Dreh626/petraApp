@@ -22,8 +22,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
+        Petra
     </title>
     <?= $this->Html->meta('icon') ?>
 
@@ -40,7 +39,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 <body>
     <nav class="top-nav">
         <div class="top-nav-title">
-            <a href="/"><img src="../img/logo.png" /></a>
+            <a href="/"><img src="../../img/logo.png" /></a>
         </div>
         <div class="top-nav-links">
             <!-- <a target="_blank" href="https://book.cakephp.org/4/">Documentation</a> -->

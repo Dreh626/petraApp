@@ -65,6 +65,12 @@ $routes->scope('/', function (RouteBuilder $builder) {
     #$builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'index']);
+    
+    // Rota para Login
+    $builder->connect('/login', ['controller' => 'Usuarios', 'action' => 'login']);
+    
+    // Rota para Logout
+    $builder->connect('/logout', ['controller' => 'Usuarios', 'action' => 'logout']);
 
     /*
      * ...and connect the rest of 'Pages' controller's URLs.

@@ -57,11 +57,11 @@ class InteressadosController extends AppController
 
                 $this->getMailer('Interessados')->send('novoInteressado', [$interessado]);
 
-                $this->Flash->success(__('The interessado has been saved.'));
+                $this->Flash->success(__('Interessado salvo com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The interessado could not be saved. Please, try again.'));
+            $this->Flash->error(__('O interessado não pode ser salvo. Por favor, tente novamente.'));
         }
         $this->set(compact('interessado'));
     }
@@ -81,11 +81,11 @@ class InteressadosController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $interessado = $this->Interessados->patchEntity($interessado, $this->request->getData());
             if ($this->Interessados->save($interessado)) {
-                $this->Flash->success(__('The interessado has been saved.'));
+                $this->Flash->success(__('Interessado atualizado com sucesso.'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The interessado could not be saved. Please, try again.'));
+            $this->Flash->error(__('O interessado não pode ser atualizado. Por favor, tente novamente.'));
         }
         $this->set(compact('interessado'));
     }
@@ -102,9 +102,9 @@ class InteressadosController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $interessado = $this->Interessados->get($id);
         if ($this->Interessados->delete($interessado)) {
-            $this->Flash->success(__('The interessado has been deleted.'));
+            $this->Flash->success(__('O interessado foi deletado.'));
         } else {
-            $this->Flash->error(__('The interessado could not be deleted. Please, try again.'));
+            $this->Flash->error(__('O interessado não pode ser deletado. Por favor, tente novamente.'));
         }
 
         return $this->redirect(['action' => 'index']);
