@@ -11,10 +11,12 @@ $this->disableAutoLayout();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <?= $this->Html->charset() ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         Petra
@@ -72,234 +74,260 @@ $this->disableAutoLayout();
             </div>
         </nav>
     </header>
+    <!-- analisar divs com padding -->
     <main>
-        <div class="container-fluid">
-            <!-- Carousel -->
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="3000"  data-ride="carousel">
-                <ol class=" carousel carousel-indicators">
-                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/banner1.svg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <div class="texto_slide_principal col-sm-4" >
-                                <h1><u>Ser Petra</u> <strong>é ser ecônomico</strong><h1>
+        <!-- Carousel -->
+        <section class="team">
+                <div class="">
+                    <div class="">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Primeira Imagem -->
+                                <div class="carousel-item active banner1">
+                                    <div class="row">
+                                    <div class="col-lg-1"></div>
+                                    <div class="col-lg-5 texto-1">
+                                        <span class="sublinhado">Ser Petra</span> é ser<strong> inovador.</strong>
+                                    </div>
+                                    
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-4 texto-2">
+                                    Você contribui para <strong>soluções limpas</br> e eficientes</strong> para o planeta.
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                <!-- Fim primeira Imagem -->
+                                <!-- Segunda imagem -->
+                                <div class="carousel-item banner2">
+                                    <div class="row">
+                                    <div class="col-lg-1"></div>
+                                    <div class="col-lg-5 texto-1">
+                                        <span class="sublinhado">Ser Petra</span> é ser<strong> consciente.</strong>
+                                    </div>
+                                    
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-4 texto-2">
+                                    Você<strong> poupa a emissão</strong> de</br> toneladas de CO&#8322; para a atmosfera.
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                <!-- Fim segunda imagem -->
+                                <!-- Terceira imagem -->
+                                <div class="carousel-item banner3">
+                                    <div class="row">
+                                    <div class="col-lg-1"></div>
+                                    <div class="col-lg-5 texto-1">
+                                        <span class="sublinhado">Ser Petra</span> é ser <strong>econômico.</strong>
+                                    </div>
+                                    
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-4 texto-2">
+                                    Você <strong>economiza até 95% no valor</strong></br>da conta de energia da sua casa. 
+                                    </div>
+                                    
+                                    </div>
+                                </div>
+                                <!-- Fim terceira imagem -->
                             </div>
-                            <div class="Texto_secundario col-sm-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi voluptatem dolore quisquam quo obcaecati repudiandae facere. Magni vel, itaque inventore aperiam illum doloremque obcaecati explicabo ipsa quidem quasi impedit commodi.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/banner2.svg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <img src="../img/banner3.svg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        </section>
+        <!-- Fim Carousel -->
+
+        <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
+            <div class="col-sm-6">
+                <h1>
+                    <p>O que fazemos?</p>
+                </h1>
+                <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis
+                    de energia solar fotovoltaica em sua casa ou empresa.
+                    <br><br>
+                    Nós temos a missão de levar uma energia limpa e inesgotável para as casas
+                    dos brasileiros, contribuindo com o meio ambiente, com a economia de cada
+                    família e com o desenvolvimento do país.
+                </p>
             </div>
-            <!-- Fim Carousel -->
-
-            <div id="o-que-fazemos" class="row o-que-fazemos" alt="O que fazemos?">
-                <div class="col-sm-6">
-                    <h1>
-                        <p>O que fazemos?</p>
-                    </h1>
-                    <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis
-                        de energia solar fotovoltaica em sua casa ou empresa.
-                        <br><br>
-                        Nós temos a missão de levar uma energia limpa e inesgotável para as casas
-                        dos brasileiros, contribuindo com o meio ambiente, com a economia de cada
-                        família e com o desenvolvimento do país.
-                    </p>
-                </div>
-                <div class="col-sm-2 text-center"></div>
-                <div class="col-sm-3 text-center">
-                    <button class="btn btn-sm btn-outline-secondary">
+            <div class="col-sm-2 text-center"></div>
+            <div class="col-sm-3 text-center">
+                <a class="btn btn-sm btn-outline-secondary button" href="#simulacao">Faça uma simulação<br>
+                    em sua casa ou empresa</a>
+                <!-- <button class="btn btn-sm btn-outline-secondary">
                         Faça uma simulação<br>
                         em sua casa ou empresa
-                    </button>
-                </div>
-                <div class="col-sm-1 text-center"></div>
+                    </button> -->
             </div>
+            <div class="col-sm-1 text-center"></div>
+        </div>
 
-            <div id="o-passo-a-passo" class="row passo-a-passo" alt="O passo a passo">
-                <div class="col-sm-12">
-                    <img src="../img/passo-a-passo.jpg" alt="passo-a-passo" />
-                </div>
+        <div id="o-passo-a-passo" class="passo-a-passo" alt="O passo a passo">
+            <div class="">
+                <img src="../img/passo-a-passo.jpg" alt="passo-a-passo" />
             </div>
-            <div id="quero-um-projeto" class="row quero-um-projeto" alt="Quero realizar um projeto">
-                <div class="col-sm-3 text-center"></div>
-                <div class="col-sm-6 text-center">
-                    <button class="btn btn-sm btn-outline-secondary">Quero realizar um projeto.</button>
-                </div>
-                <div class="col-sm-3 text-center"></div>
+        </div>
+        <div id="quero-um-projeto" class="row quero-um-projeto" alt="Quero realizar um projeto">
+            <div class="col-sm-3 text-center"></div>
+            <div class="col-sm-6 text-center">
+                <a class="btn btn-sm btn-outline-secondary btn-projeto" href="#simulacao">Quero realizar um projeto.</a>
+                <!-- <button class="btn btn-sm btn-outline-secondary">Quero realizar um projeto.</button> -->
             </div>
+            <div class="col-sm-3 text-center"></div>
+        </div>
 
-            <div id="dados" class="row dados" alt="Dados Estatisticos">
-                <div class="col-sm-2 text-center"></div>
-                <div class="col-sm-2 text-center">
-                    <h1>20</h1>
-                    <p> toneladas de CO2 poupados.</p>
-                </div>
-                <div class="col-sm-2 text-center">
-                    <h1>5.000</h1>
-                    <p>kw de energia gerada.</p>
-                </div>
-                <div class="col-sm-2 text-center">
-                    <h1>2,5</h1>
-                    <p>milhões economizados por nossos clientes.</p>
-                </div>
-                <div class="col-sm-2 text-center">
-                    <h1>60</h1>
-                    <p>Estudos realizados</p>
-                </div>
-                <div class="col-sm-2 text-center"></div>
+        <div id="dados" class="row dados" alt="Dados Estatisticos">
+            <div class="col-sm-2 text-center"></div>
+            <div class="col-sm-2 text-center">
+                <h1>20</h1>
+                <p> toneladas de CO2 poupados.</p>
             </div>
+            <div class="col-sm-2 text-center">
+                <h1>5.000</h1>
+                <p>kw de energia gerada.</p>
+            </div>
+            <div class="col-sm-2 text-center">
+                <h1>2,5</h1>
+                <p>milhões economizados por nossos clientes.</p>
+            </div>
+            <div class="col-sm-2 text-center">
+                <h1>60</h1>
+                <p>Estudos realizados</p>
+            </div>
+            <div class="col-sm-2 text-center"></div>
+        </div>
 
-            <div id="projetos" class="row projetos" alt="Projetos realizados">
-                <div class="col-sm-12 text-center">
-                    <h1>
-                        <p>Projetos realizados</p>
-                    </h1>
-                </div>
-                <!-- Inicio dos cards de projetos -->
-                <!-- <div class="album py-5 bg-light"> -->
-                <div class="container">
+        <div id="projetos" class="row projetos" alt="Projetos realizados">
+            <div class="col-sm-12 text-center">
+                <h1>
+                    <p>Projetos realizados</p>
+                </h1>
+            </div>
+            <!-- Inicio dos cards de projetos -->
+            <!-- <div class="album py-5 bg-light"> -->
+            <div class="container">
 
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                            </div>
-                            <p class="card-text text-center">Araraquara -SP</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
                         </div>
-                        <!-- São Carlos -->
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                            </div>
-                            <p class="card-text text-center">São Carlos -SP</p>
+                        <p class="card-text text-center">Araraquara -SP</p>
+                    </div>
+                    <!-- São Carlos -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
                         </div>
-                        <!-- Sorocaba  -->
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                            </div>
-                            <p class="card-text text-center">Sorocaba -SP</p>
+                        <p class="card-text text-center">São Carlos -SP</p>
+                    </div>
+                    <!-- Sorocaba  -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
                         </div>
-                        <!-- Ribeirão Preto -->
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                            </div>
-                            <p class="card-text text-center">Ribeirão Preto -SP</p>
+                        <p class="card-text text-center">Sorocaba -SP</p>
+                    </div>
+                    <!-- Ribeirão Preto -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
                         </div>
-                        <!-- Campinas -->
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                            </div>
-                            <p class="card-text text-center">Campinas -SP</p>
+                        <p class="card-text text-center">Ribeirão Preto -SP</p>
+                    </div>
+                    <!-- Campinas -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
                         </div>
-                        <!-- Matão -->
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                    <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                                </svg>
-                            </div>
-                            <p class="card-text text-center">Matão-SP</p>
+                        <p class="card-text text-center">Campinas -SP</p>
+                    </div>
+                    <!-- Matão -->
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
+                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
                         </div>
+                        <p class="card-text text-center">Matão-SP</p>
                     </div>
                 </div>
-                <!-- fim dos cards de projetos -->
             </div>
-            <!-- fim <div> projetos -->
-            <div class="container"></div>
-            <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
-                <div class="col-sm-4">
-                    <h2>
-                        <p>Faça Sua Simulação<br>
-                            e econimize até <br>
-                            95% em sua conta <br>
-                            de energia.
-                        </p>
-                    </h2>
-                </div>
-                <div class="col-sm-7">
-                    <!-- Inicio do formulario -->
-                    <form>
-                        <div class="form-group">
-                            <label for="inputAddress">Nome</label>
-                            <input type="text" class="form-control" id="inputName" placeholder="Seu nome">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">E-mail</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Seu E-mail">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Celular</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Seu celular">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Endereço</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Seu endereço">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Tipo de Instalação</label>
-                            <input type="text" class="form-control" id="inputTipoInstalacao" placeholder="O tipo de instalação desejada">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Metragem da residência/empresa:</label>
-                            <input type="text" class="form-control" id="inputArea" placeholder="Metragem do projeto">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Quanta paga em média na sua conta atualmente</label>
-                            <input type="text" class="form-control" id="inputMediaConta" placeholder="Valor da conta atual">
-                        </div>
-                        <button type="submit" class="btn btn-envia btn-primary">Enviar</button>
-                    </form>
-                </div>
-                <!-- <div class="col-sm-1"></div> -->
+            <!-- fim dos cards de projetos -->
+        </div>
+        <!-- fim <div> projetos -->
+        <div class="container"></div>
+        <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
+            <div class="col-sm-4">
+                <h2>
+                    <p>Faça Sua Simulação<br>
+                        e econimize até <br>
+                        95% em sua conta <br>
+                        de energia.
+                    </p>
+                </h2>
             </div>
-            <!-- final <div> simulacao -->
+            <div class="col-sm-7">
+                <!-- Inicio do formulario -->
+                <form>
+                    <div class="form-group">
+                        <label for="inputAddress">Nome</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">E-mail</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Seu E-mail">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Celular</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Seu celular">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Endereço</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Seu endereço">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Tipo de Instalação</label>
+                        <input type="text" class="form-control" id="inputTipoInstalacao" placeholder="O tipo de instalação desejada">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Metragem da residência/empresa:</label>
+                        <input type="text" class="form-control" id="inputArea" placeholder="Metragem do projeto">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Quanta paga em média na sua conta atualmente</label>
+                        <input type="text" class="form-control" id="inputMediaConta" placeholder="Valor da conta atual">
+                    </div>
+                    <button type="submit" class="btn btn-envia btn-primary">Enviar</button>
+                </form>
+            </div>
+            <!-- <div class="col-sm-1"></div> -->
+        </div>
+        <!-- final <div> simulacao -->
         </div>
         <!-- final <div> container-fluid -->
     </main>
     <footer>
         <div id="contato" class="row contato" alt="Contato">
-            <div class="col-sm-4">
+            <div class="col-sm-12">
                 <ul>
                     <li>
                         <h2>Fale Conosco:<h2>
