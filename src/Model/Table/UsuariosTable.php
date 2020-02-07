@@ -53,24 +53,25 @@ class UsuariosTable extends Table
             ->scalar('nome')
             ->maxLength('nome', 255)
             ->requirePresence('nome', 'create')
-            ->notEmptyString('nome');
+            ->notEmptyString('nome','O nome deve ser preenchido!');
 
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmptyString('email');
+            ->notEmptyString('email','O email deve ser preenchido!');
 
         $validator
             ->scalar('login')
             ->maxLength('login', 255)
-            ->requirePresence('login', 'create')
-            ->notEmptyString('login');
+            ->minLength('login', 5,'O login deve conter ao mínimo 5 caracteres!')
+            ->notEmptyString('login','O login deve ser preenchido!');
 
         $validator
             ->scalar('senha')
             ->maxLength('senha', 255)
+            ->minLength('senha', 5,'A senha deve conter ao mínimo 5 caracteres!')
             ->requirePresence('senha', 'create')
-            ->notEmptyString('senha');
+            ->notEmptyString('senha','A senha deve ser preenchida!');
 
         return $validator;
     }

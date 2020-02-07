@@ -53,35 +53,35 @@ class InteressadosTable extends Table
             ->scalar('nome')
             ->maxLength('nome', 255)
             ->requirePresence('nome', 'create')
-            ->notEmptyString('nome');
+            ->notEmptyString('nome','O nome deve ser preenchido!');
 
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
-            ->notEmptyString('email');
+            ->notEmptyString('email','O email deve ser preenchido!');
 
         $validator
             ->scalar('celular')
-            ->maxLength('celular', 255)
+            ->maxLength('celular', 11)
             ->requirePresence('celular', 'create')
-            ->notEmptyString('celular');
+            ->notEmptyString('celular','O celular deve ser preenchido!');
 
         $validator
             ->scalar('endereco')
             ->maxLength('endereco', 255)
             ->requirePresence('endereco', 'create')
-            ->notEmptyString('endereco');
+            ->notEmptyString('endereco','O endereço deve ser preenchido!');
 
         $validator
             ->scalar('tipo_instalacao')
             ->maxLength('tipo_instalacao', 255)
             ->requirePresence('tipo_instalacao', 'create')
-            ->notEmptyString('tipo_instalacao');
+            ->notEmptyString('tipo_instalacao','O tipo de instalação deve ser preenchido!');
 
         $validator
             ->decimal('metragem')
             ->requirePresence('metragem', 'create')
-            ->notEmptyString('metragem');
+            ->notEmptyString('metragem','A metragem deve ser preenchida!');
 
         $validator
             ->decimal('conta_atual')
