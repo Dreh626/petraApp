@@ -47,25 +47,19 @@ $this->disableAutoLayout();
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto itemMenu">
                     <li class="nav-item">
-                        <a class="nav-link" href="#o-que-fazemos">O que fazemos?</a>
+                        <a class="nav-link texto-menu" href="#o-que-fazemos">O que fazemos?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#o-passo-a-passo">O passo-a-passo</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#dados">Dados</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projetos">Projetos Realizados</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#simulacao">Simulação</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contato">Contato</a>
+                        <a class="nav-link texto-menu" href="#o-passo-a-passo">O passo-a-passo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link img_login" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
+                        <a class="nav-link texto-menu" href="#projetos">Projetos Realizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link texto-menu contato" href="#contato">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link img_login texto-menu" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-sm btn-outline-secondary" href="#simulacao">Faça sua simulação</a>
@@ -77,71 +71,71 @@ $this->disableAutoLayout();
     <!-- analisar divs com padding -->
     <main>
         <!-- Carousel -->
-        <section class="team">
+        <section class="section_carousel">
+            <div class="">
                 <div class="">
-                    <div class="">
-                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <!-- Primeira Imagem -->
-                                <div class="carousel-item active banner1">
-                                    <div class="row">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Primeira Imagem -->
+                            <div class="carousel-item active banner1">
+                                <div class="row">
                                     <div class="col-lg-1"></div>
                                     <div class="col-lg-5 texto-1">
                                         <span class="sublinhado">Ser Petra</span> é ser<strong> inovador.</strong>
                                     </div>
-                                    
+
                                     <div class="col-lg-2"></div>
                                     <div class="col-lg-4 texto-2">
-                                    Você contribui para <strong>soluções limpas</br> e eficientes</strong> para o planeta.
+                                        Você contribui para <strong>soluções limpas</br> e eficientes</strong> para o planeta.
                                     </div>
-                                    
-                                    </div>
+
                                 </div>
-                                <!-- Fim primeira Imagem -->
-                                <!-- Segunda imagem -->
-                                <div class="carousel-item banner2">
-                                    <div class="row">
+                            </div>
+                            <!-- Fim primeira Imagem -->
+                            <!-- Segunda imagem -->
+                            <div class="carousel-item banner2">
+                                <div class="row">
                                     <div class="col-lg-1"></div>
                                     <div class="col-lg-5 texto-1">
                                         <span class="sublinhado">Ser Petra</span> é ser<strong> consciente.</strong>
                                     </div>
-                                    
+
                                     <div class="col-lg-2"></div>
                                     <div class="col-lg-4 texto-2">
-                                    Você<strong> poupa a emissão</strong> de</br> toneladas de CO&#8322; para a atmosfera.
+                                        Você<strong> poupa a emissão</strong> de</br> toneladas de CO&#8322; para a atmosfera.
                                     </div>
-                                    
-                                    </div>
+
                                 </div>
-                                <!-- Fim segunda imagem -->
-                                <!-- Terceira imagem -->
-                                <div class="carousel-item banner3">
-                                    <div class="row">
+                            </div>
+                            <!-- Fim segunda imagem -->
+                            <!-- Terceira imagem -->
+                            <div class="carousel-item banner3">
+                                <div class="row">
                                     <div class="col-lg-1"></div>
                                     <div class="col-lg-5 texto-1">
                                         <span class="sublinhado">Ser Petra</span> é ser <strong>econômico.</strong>
                                     </div>
-                                    
+
                                     <div class="col-lg-2"></div>
                                     <div class="col-lg-4 texto-2">
-                                    Você <strong>economiza até 95% no valor</strong></br>da conta de energia da sua casa. 
+                                        Você <strong>economiza até 95% no valor</strong></br>da conta de energia da sua casa.
                                     </div>
-                                    
-                                    </div>
+
                                 </div>
-                                <!-- Fim terceira imagem -->
                             </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                            <!-- Fim terceira imagem -->
                         </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
                 </div>
+            </div>
         </section>
         <!-- Fim Carousel -->
 
@@ -217,55 +211,55 @@ $this->disableAutoLayout();
 
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                        <div class="card shadow-sm">
+                            <div class="card" style="width: 100%;">
+                                <img src="../img/araraquara.jpg" class="card-img-top" alt="..." height="220px">
+                            </div>
                         </div>
                         <p class="card-text text-center">Araraquara -SP</p>
                     </div>
                     <!-- São Carlos -->
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                        <div class="card shadow-sm">
+                        <div class="card" style="width: 100%;">
+                                <img src="../img/saocarlos.jpg" class="card-img-top" alt="..." height="220px">
+                            </div>
                         </div>
                         <p class="card-text text-center">São Carlos -SP</p>
                     </div>
                     <!-- Sorocaba  -->
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                        <div class="card shadow-sm">
+                        <div class="card" style="width: 100%; height:220px;">
+                                <img src="../img/sorocaba.gif" class="card-img-top" alt="..." height="220px">
+                            </div>
                         </div>
                         <p class="card-text text-center">Sorocaba -SP</p>
                     </div>
                     <!-- Ribeirão Preto -->
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                        <div class="card shadow-sm">
+                        <div class="card" style="width: 100%; height:220px;">
+                                <img src="../img/ribeiraopreto.jpg" class="card-img-top" alt="..." height="220px">
+                            </div>
                         </div>
                         <p class="card-text text-center">Ribeirão Preto -SP</p>
                     </div>
                     <!-- Campinas -->
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                        <div class="cardshadow-sm">
+                        <div class="card" style="width: 100%;height:220px;">
+                                <img src="../img/campinas.jpg" class="card-img-top" alt="..." height="220px">
+                            </div>
                         </div>
                         <p class="card-text text-center">Campinas -SP</p>
                     </div>
                     <!-- Matão -->
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
-                            </svg>
+                        <div class="card shadow-sm">
+                        <div class="card" style="width: 100%; height:220px;">
+                                <img src="../img/matao.jpg" class="card-img-top" alt="..." height="220px">
+                            </div>
                         </div>
                         <p class="card-text text-center">Matão-SP</p>
                     </div>
@@ -276,7 +270,7 @@ $this->disableAutoLayout();
         <!-- fim <div> projetos -->
         <div class="container"></div>
         <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
-            <div class="col-sm-4">
+            <div class="col-sm-4 texto-simulacao">
                 <h2>
                     <p>Faça Sua Simulação<br>
                         e econimize até <br>
@@ -285,7 +279,7 @@ $this->disableAutoLayout();
                     </p>
                 </h2>
             </div>
-            <div class="col-sm-7">
+            <div class="col-sm-7 formulario-simulacao">
                 <!-- Inicio do formulario -->
                 <form>
                     <div class="form-group">

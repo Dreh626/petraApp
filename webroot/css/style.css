@@ -38,10 +38,6 @@ main {
     width: 100%;
 }
 
-.img_logo {
-
-    height: 50px;
-}
 
 .menu a {
     padding: 0%;
@@ -50,6 +46,13 @@ main {
     color: rgb(250, 250, 250) !important;
 }
 
+.menu .texto-menu{
+    padding-top: 5% !important ;
+}
+
+.contato{
+    padding-top: 8% !important ;
+}
 .menu a img {
     height: 100%;
     width: 65%;
@@ -74,15 +77,15 @@ main {
 }
 
 /* Itens do Menu*/
-.itemMenu li {
+/* .itemMenu li {
     padding: 10px 10px 10px 10px;
-}
+} */
 
-.itemMenu li a {
+/* .itemMenu li a {
     margin-top: 3% !important;
     color: rgb(250, 250, 250) !important;
 
-}
+} */
 
 .itemMenu {
     margin-right: 25px;
@@ -129,25 +132,25 @@ main {
 
 
 /* Carousel */
-.team{
-   background-color: rgb(221, 95, 6);
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
+.section_carousel {
+    background-color: rgb(221, 95, 6);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.row{
-    margin: 100%  !important;
+.row {
+    margin: 100% !important;
 }
 
-.texto-1{
+.texto-1 {
     font-size: 3rem;
     color: rgb(250, 250, 250);
     margin-top: 16rem;
     text-shadow: 0.08em 0.08em 0.18em black;
 }
 
-.texto-2{
+.texto-2 {
     font-size: 1.5rem;
     color: rgb(250, 250, 250);
     margin-top: 16rem;
@@ -155,28 +158,29 @@ main {
     padding-right: 3%;
 }
 
-.sublinhado{
-    border-bottom: 2px solid rgb(221,95, 6);
+.sublinhado {
+    border-bottom: 2px solid rgb(221, 95, 6);
 }
 
-.strong{
+.strong {
     font-weight: bold;
     text-align: left !important;
 }
-.row{
+
+.row {
     margin: 0em !important;
 }
 
-.banner1{
+.banner1 {
     background-image: url(../img/banner1.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 700px; 
+    height: 700px;
 }
 
-.banner2{
+.banner2 {
     background-image: url(../img/banner2.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -185,7 +189,7 @@ main {
     height: 700px;
 }
 
-.banner3{
+.banner3 {
     background-image: url(../img/banner3.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -330,14 +334,20 @@ footer .row {
     }
 
     .navbar {
+        height: auto;
         margin: 0% !important;
         padding: 0% !important;
     }
 
     .img_logo {
-        height: auto;
+        height: 70px !important;
         margin-top: auto;
         width: 72% !important;
+    }
+
+    .img_logo img {
+        height: 70px !important;
+        width: 70% !important;
     }
 
     .navbar-toggler {
@@ -348,5 +358,38 @@ footer .row {
         margin-right: 25% !important;
     }
 
+    /* Carousel */
+    .carousel {
+        height: auto;
+        padding: 0% !important;
+        margin: 0% !important;
+    }
+
+    .texto-2 {
+        display: none;
+    }
+
+    .simulacao {
+        font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
+        color: rgb(250, 250, 250);
+        background-image: none;
+        width: 100%;
+        min-height: 600px;
+        margin: 0% !important;
+    }
+
+    .texto-simulacao {
+        background-image: url(../img/simulacao.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .formulario-simulacao {
+        background-color: rgb(221, 95, 6);
+    }
 
 }
