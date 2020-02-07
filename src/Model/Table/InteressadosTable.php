@@ -52,6 +52,7 @@ class InteressadosTable extends Table
         $validator
             ->scalar('nome')
             ->maxLength('nome', 255)
+            ->minLength('nome', 3,'O nome deve conter ao mínimo 3 caracteres!')
             ->requirePresence('nome', 'create')
             ->notEmptyString('nome','O nome deve ser preenchido!');
 

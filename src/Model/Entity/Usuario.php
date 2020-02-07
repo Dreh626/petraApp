@@ -31,13 +31,17 @@ class Usuario extends Entity
         'nome' => true,
         'email' => true,
         'login' => true,
+        'senha' => true,
     ];
 
+    /**
+     * Fields that are excluded from JSON versions of the entity.
+     *
+     * @var array
+     */
     protected $_hidden = [
         'senha'
     ];
 
-    protected function _setPassword($senha){
-        return ( new DefaultPasswordHasher )->hash($senha);
-    }
+
 }

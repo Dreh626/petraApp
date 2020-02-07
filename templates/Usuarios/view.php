@@ -7,11 +7,11 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Usuario'), ['action' => 'edit', $usuario->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Usuario'), ['action' => 'delete', $usuario->id], ['confirm' => __('Are you sure you want to delete # {0}?', $usuario->id), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Usuarios'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Usuario'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('Ações') ?></h4>
+            <?= $this->Html->link(__('Editar Usuário'), ['action' => 'edit', $usuario->id], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Deletar Usuário'), ['action' => 'delete', $usuario->id], ['confirm' => __('Tem certeza que quer deletar # {0}?', $usuario->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Listar Usuários'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('Novo Usuário'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
@@ -29,10 +29,6 @@
                 <tr>
                     <th><?= __('Login') ?></th>
                     <td><?= h($usuario->login) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Senha') ?></th>
-                    <td><?= h($usuario->senha) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

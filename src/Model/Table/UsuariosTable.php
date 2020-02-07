@@ -3,10 +3,13 @@ declare(strict_types=1);
 
 namespace App\Model\Table;
 
+use App\Model\Entity\Usuario;
+use Cake\Event\Event;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+
 
 /**
  * Usuarios Model
@@ -52,6 +55,7 @@ class UsuariosTable extends Table
         $validator
             ->scalar('nome')
             ->maxLength('nome', 255)
+            ->minLength('nome', 3,'O nome deve conter ao mínimo 3 caracteres!')
             ->requirePresence('nome', 'create')
             ->notEmptyString('nome','O nome deve ser preenchido!');
 
@@ -89,4 +93,12 @@ class UsuariosTable extends Table
 
         return $rules;
     }
+
+    public function beforeSave(Event $event, Usuario $entity)
+    {
+        $entity->senha = \Cake\Utility\Security::hash($entity->senha,'sha256');
+        // debug($entity);
+        // exit();
+    }
+
 }
