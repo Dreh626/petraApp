@@ -210,61 +210,205 @@ $this->disableAutoLayout();
             <div class="container">
 
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-toggle="modal" data-target="#ModalAraraquara">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
                                 <img src="../img/araraquara.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Araraquara -SP</p>
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalAraraquara">
+                            Launch demo modal
+                        </button> -->
                     </div>
+
+                    <!-- Modal Ararquara -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalAraraquara" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em Araraquara</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Modal Araraquara -->
+
                     <!-- São Carlos -->
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-toggle="modal" data-target="#ModalSaoCarlos">
                         <div class="card shadow-sm">
-                        <div class="card" style="width: 100%;">
+                            <div class="card" style="width: 100%;">
                                 <img src="../img/saocarlos.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">São Carlos -SP</p>
                     </div>
+
+                    <!-- Modal Sao Carlos -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalSaoCarlos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em São Carlos</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Modal Sao Carlos -->
+                    <!-- Fim card São Carlos -->
+
                     <!-- Sorocaba  -->
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-toggle="modal" data-target="#ModalSorocaba">
                         <div class="card shadow-sm">
-                        <div class="card" style="width: 100%; height:220px;">
+                            <div class="card" style="width: 100%;">
                                 <img src="../img/sorocaba.gif" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Sorocaba -SP</p>
                     </div>
+
+                    <!-- Modal Sorocaba -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalSorocaba" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em Sorocaba</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Modal Sorocaba -->
+
                     <!-- Ribeirão Preto -->
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-toggle="modal" data-target="#ModalRP">
                         <div class="card shadow-sm">
-                        <div class="card" style="width: 100%; height:220px;">
+                            <div class="card" style="width: 100%;">
                                 <img src="../img/ribeiraopreto.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Ribeirão Preto -SP</p>
                     </div>
+
+                    <!-- Modal Ribeirão Preto -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalRP" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em Ribeirão Preto</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim do Modal Ribeirão Preto -->
+
                     <!-- Campinas -->
-                    <div class="col-md-4">
-                        <div class="cardshadow-sm">
-                        <div class="card" style="width: 100%;height:220px;">
+                    <div class="col-md-4" data-toggle="modal" data-target="#ModalCampinas">
+                        <div class="card shadow-sm">
+                            <div class="card" style="width: 100%;">
                                 <img src="../img/campinas.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Campinas -SP</p>
                     </div>
+
+                    <!-- Modal Campinas -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalCampinas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em Campinas</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim modal campinas -->
+                    <!-- Fim card campinas -->
+
                     <!-- Matão -->
-                    <div class="col-md-4">
+                    <div class="col-md-4" data-toggle="modal" data-target="#ModalMatao">
                         <div class="card shadow-sm">
-                        <div class="card" style="width: 100%; height:220px;">
+                            <div class="card" style="width: 100%;">
                                 <img src="../img/matao.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
-                        <p class="card-text text-center">Matão-SP</p>
+                        <p class="card-text text-center">Matão -SP</p>
                     </div>
+
+                    <!-- Modal Matao -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="ModalMatao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em Matão</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim modal Matão -->
+                    <!-- Fim card Matao -->
                 </div>
             </div>
+
             <!-- fim dos cards de projetos -->
         </div>
         <!-- fim <div> projetos -->
@@ -319,6 +463,12 @@ $this->disableAutoLayout();
         </div>
         <!-- final <div> container-fluid -->
     </main>
+    <div>
+        <a href="https://api.whatsapp.com/send?phone=+5516991393556 AQUI&text=Gostaria de um orçamento Petra" target="_blank">
+            <img class="whatsapp" src="../img/whatsapp.svg" />
+        </a>
+    </div>
+    <!-- fim botão whats -->
     <footer>
         <div id="contato" class="row contato" alt="Contato">
             <div class="col-sm-12">
