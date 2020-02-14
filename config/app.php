@@ -227,8 +227,8 @@ return [
             'host' => 'smtp.gmail.com',
             'port' => 587,
             'timeout' => 30,
-            'username' => 'contato@petrasolar.com.br',
-            'password' => '302010',
+            'username' => 'teste@fatectq.edu.br',
+            'password' => 'teste123',
             'client' => null,
             'tls' => true,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
@@ -256,7 +256,7 @@ return [
         ],
         'emailPetra' => [
             'transport' => 'transportPetra',
-            'from' => ['contato@petrasolar.com.br' => 'Contato Petra Solar'],
+            'from' => ['teste@fatectq.edu.br' => 'Contato Petra Solar'],
         ],
     ],
 

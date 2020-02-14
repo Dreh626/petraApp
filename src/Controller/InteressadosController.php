@@ -47,15 +47,12 @@ class InteressadosController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    use MailerAwareTrait;
     public function add()
     {
         $interessado = $this->Interessados->newEmptyEntity();
         if ($this->request->is('post')) {
             $interessado = $this->Interessados->patchEntity($interessado, $this->request->getData());
             if ($this->Interessados->save($interessado)) {
-
-                $this->getMailer('Interessados')->send('novoInteressado', [$interessado]);
 
                 $this->Flash->success(__('Interessado salvo com sucesso.'));
 
@@ -109,4 +106,30 @@ class InteressadosController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    /**
+     * metodo simulacao
+     *
+     * Chamada pelo botão enviar na pagina principal do site.
+     * Responsável por salvar os dados do usuário no Banco e enviar e-mail de novo interessado.
+     */
+    use MailerAwareTrait;
+    public function simulacao()
+    {
+        $interessado = $this->Interessados->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $interessado = $this->Interessados->patchEntity($interessado, $this->request->getData());
+            if ($this->Interessados->save($interessado)) {
+
+                $this->getMailer('Interessados')->send('novoInteressado', [$interessado]);
+
+                $this->Flash->success(__('Interessado salvo com sucesso.'));
+
+                return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+            }
+            $this->Flash->error(__('O interessado não pode ser salvo. Por favor, tente novamente.'));
+        }
+        $this->set(compact('interessado'));
+    }
+
 }

@@ -7,6 +7,10 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
+// use Cake\Mailer\Mailer;
+// use Cake\Mailer\MailerAwareTrait;
+use \App\Model\Entity\Interessado;
+
 $this->disableAutoLayout();
 
 ?>
@@ -425,37 +429,93 @@ $this->disableAutoLayout();
             </div>
             <div class="col-sm-7 formulario-simulacao">
                 <!-- Inicio do formulario -->
-                <form>
-                    <div class="form-group">
-                        <label for="inputAddress">Nome</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Seu nome">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">E-mail</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Seu E-mail">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Celular</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Seu celular">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Endereço</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Seu endereço">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Tipo de Instalação</label>
-                        <input type="text" class="form-control" id="inputTipoInstalacao" placeholder="O tipo de instalação desejada">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Metragem da residência/empresa:</label>
-                        <input type="text" class="form-control" id="inputArea" placeholder="Metragem do projeto">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputAddress">Quanta paga em média na sua conta atualmente</label>
-                        <input type="text" class="form-control" id="inputMediaConta" placeholder="Valor da conta atual">
-                    </div>
-                    <button type="submit" class="btn btn-envia btn-primary">Enviar</button>
-                </form>
+                <?php
+                    echo $this->Form->create(null, [
+                        'url' => [
+                            'controller' => 'Interessados',
+                            'action' => 'simulacao'
+                        ]
+                    ]);
+                ?>
+                <div class="form-group">
+                    <?php
+                    echo $this->Form->label('nome', 'Nome Completo:');
+                    echo $this->Form->control('inputNome', [
+                        'label' => false,
+                        'type' => 'text',
+                        'id' => 'inputNome',
+                        'class' => 'form-control'
+                    ]);
+                    ?>
+                </div>                    
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->label('email','E-mail:');
+                        echo $this->Form->control('inputEmail', [
+                            'label' => false,
+                            'type' => 'email',
+                            'id' => 'inputEmail',
+                            'class' => 'form-control'
+                        ]);
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->label('celular','Celular:');
+                        echo $this->Form->control('inputCelular', [
+                            'label' => false,
+                            'type' => 'tel',
+                            'id' => 'inputCelular',
+                            'class' => 'form-control'
+                        ]);
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->label('endereco','Endereço:');
+                        echo $this->Form->control('inputEndereco', [
+                            'label' => false,
+                            'type' => 'text',
+                            'id' => 'inputEndereco',
+                            'class' => 'form-control'
+                        ]);
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->label('tipo_instalacao','Tipo de Instalação:');
+                        echo $this->Form->control('inputTipoInstalacao', [
+                            'label' => false,
+                            'type' => 'text',
+                            'id' => 'inputTipoInstalacao',
+                            'class' => 'form-control'
+                        ]);
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->label('metragem','Metragem da residência/empresa:');
+                        echo $this->Form->control('inputMetragem', [
+                            'label' => false,
+                            'type' => 'number',
+                            'id' => 'inputMetragem',
+                            'class' => 'form-control'
+                        ]);
+                    ?>
+                </div>
+                <div class="form-group">
+                    <?php
+                        echo $this->Form->label('conta_atual','Quanto paga em média na sua conta atualmente:');
+                        echo $this->Form->control('inputConta', [
+                            'label' => false,
+                            'type' => 'number',
+                            'id' => 'inputConta',
+                            'class' => 'form-control'
+                        ]);    
+                    ?>
+                </div>
+                <?php echo $this->Form->button(__('Enviar')); ?>
+                <?php echo $this->Form->end(); ?>
             </div>
             <!-- <div class="col-sm-1"></div> -->
         </div>
