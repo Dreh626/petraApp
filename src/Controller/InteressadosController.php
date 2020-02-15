@@ -123,11 +123,11 @@ class InteressadosController extends AppController
 
                 $this->getMailer('Interessados')->send('novoInteressado', [$interessado]);
 
-                $this->Flash->success(__('Interessado salvo com sucesso.'));
+                $this->Flash->success(__('Simulação enviada com sucesso.'));
 
                 return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
             }
-            $this->Flash->error(__('O interessado não pode ser salvo. Por favor, tente novamente.'));
+            $this->Flash->error(__('Sua solicitação de Simulação não pode ser enviada! Por favor, tente novamente.'));
         }
         $this->set(compact('interessado'));
     }

@@ -7,8 +7,6 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
-// use Cake\Mailer\Mailer;
-// use Cake\Mailer\MailerAwareTrait;
 use \App\Model\Entity\Interessado;
 
 $this->disableAutoLayout();
@@ -430,7 +428,8 @@ $this->disableAutoLayout();
             <div class="col-sm-7 formulario-simulacao">
                 <!-- Inicio do formulario -->
                 <?php
-                    echo $this->Form->create(null, [
+                    $interessado = new Interessado();
+                    echo $this->Form->create($interessado, [
                         'url' => [
                             'controller' => 'Interessados',
                             'action' => 'simulacao'
@@ -440,10 +439,10 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                     echo $this->Form->label('nome', 'Nome Completo:');
-                    echo $this->Form->control('inputNome', [
+                    echo $this->Form->control('nome', [
                         'label' => false,
                         'type' => 'text',
-                        'id' => 'inputNome',
+                        'id' => 'nome',
                         'class' => 'form-control'
                     ]);
                     ?>
@@ -451,10 +450,10 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                         echo $this->Form->label('email','E-mail:');
-                        echo $this->Form->control('inputEmail', [
+                        echo $this->Form->control('email', [
                             'label' => false,
                             'type' => 'email',
-                            'id' => 'inputEmail',
+                            'id' => 'email',
                             'class' => 'form-control'
                         ]);
                     ?>
@@ -462,10 +461,10 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                         echo $this->Form->label('celular','Celular:');
-                        echo $this->Form->control('inputCelular', [
+                        echo $this->Form->control('celular', [
                             'label' => false,
                             'type' => 'tel',
-                            'id' => 'inputCelular',
+                            'id' => 'celular',
                             'class' => 'form-control'
                         ]);
                     ?>
@@ -473,10 +472,10 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                         echo $this->Form->label('endereco','Endereço:');
-                        echo $this->Form->control('inputEndereco', [
+                        echo $this->Form->control('endereco', [
                             'label' => false,
                             'type' => 'text',
-                            'id' => 'inputEndereco',
+                            'id' => 'endereco',
                             'class' => 'form-control'
                         ]);
                     ?>
@@ -484,10 +483,10 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                         echo $this->Form->label('tipo_instalacao','Tipo de Instalação:');
-                        echo $this->Form->control('inputTipoInstalacao', [
+                        echo $this->Form->control('tipo_instalacao', [
                             'label' => false,
                             'type' => 'text',
-                            'id' => 'inputTipoInstalacao',
+                            'id' => 'tipo_instalacao',
                             'class' => 'form-control'
                         ]);
                     ?>
@@ -495,10 +494,10 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                         echo $this->Form->label('metragem','Metragem da residência/empresa:');
-                        echo $this->Form->control('inputMetragem', [
+                        echo $this->Form->control('metragem', [
                             'label' => false,
                             'type' => 'number',
-                            'id' => 'inputMetragem',
+                            'id' => 'metragem',
                             'class' => 'form-control'
                         ]);
                     ?>
@@ -506,15 +505,15 @@ $this->disableAutoLayout();
                 <div class="form-group">
                     <?php
                         echo $this->Form->label('conta_atual','Quanto paga em média na sua conta atualmente:');
-                        echo $this->Form->control('inputConta', [
+                        echo $this->Form->control('conta_atual', [
                             'label' => false,
                             'type' => 'number',
-                            'id' => 'inputConta',
+                            'id' => 'conta_atual',
                             'class' => 'form-control'
                         ]);    
                     ?>
                 </div>
-                <?php echo $this->Form->button(__('Enviar')); ?>
+                <?php echo $this->Form->button(__('Enviar'),['class' => 'btn-envia']); ?>
                 <?php echo $this->Form->end(); ?>
             </div>
             <!-- <div class="col-sm-1"></div> -->

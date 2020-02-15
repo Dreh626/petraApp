@@ -22,7 +22,7 @@ class InteressadosMailer extends Mailer
 
     public function novoInteressado( $interessado ){
         $this
-        ->setTo('mauriciodian@hotmail.com')
+        ->setTo('contato@petrasolar.com.br')
         ->setProfile('emailPetra')
         ->setEmailFormat('html')
         ->setViewVars([
