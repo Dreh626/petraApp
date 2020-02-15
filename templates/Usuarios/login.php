@@ -6,10 +6,10 @@
 <div class="usuarios form content">
     <?= $this->Form->create() ?>
     <fieldset>
-        <legend><?= __('Entre com o Login e Senha:') ?></legend>
-        <?= $this->Form->control('username') ?>
-        <?= $this->Form->control('password') ?>
+        <legend><?= __('Entre com suas credenciais:') ?></legend>
+        <?= $this->Form->control('login') ?>
+        <?= $this->Form->control('senha',['type' => 'password']) ?>
     </fieldset>
-    <?= $this->Form->button(__('Login')); ?>
+    <?= $this->Form->button(__('Entrar')); ?>
     <?= $this->Form->end() ?>
 </div>

@@ -32,6 +32,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('milligram.min.css') ?>
     <?= $this->Html->css('cake.css') ?>
 
+    <?= $this->Html->css('style.css') ?>
+
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
@@ -44,6 +46,26 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <div class="top-nav-links">
             <!-- <a target="_blank" href="https://book.cakephp.org/4/">Documentation</a> -->
             <!-- <a target="_blank" href="https://api.cakephp.org/4/">API</a> -->
+            <ul class="navbar-nav ml-auto logout">
+                <li class="nav-item">
+                    <?php
+                        echo $this->Html->link(
+                            $this->Html->image("../img/logout-icon.png", ["alt" => "Logout", 'class'=>'img_logout']),
+                            "/logout",
+                            ['escape' => false]
+                        );
+                    ?>
+                </li>
+                <li class="nav-item">
+                    <?php 
+                        echo $this->Html->link(
+                            __('Logout'),
+                            ['controller' => 'Usuarios', 'action' => 'logout']
+                        );
+                    ?>
+                </li>
+            </ul>
+
         </div>
     </nav>
     <main class="main">

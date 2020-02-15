@@ -94,8 +94,11 @@ class UsuariosTable extends Table
         return $rules;
     }
 
+    //beforeSave entra em ação antes de salvar os dados no Banco
     public function beforeSave(Event $event, Usuario $entity)
     {
+        //   Vai criptografar a senha através do metodo Security::hash do Cake
+        //criptografa a senha em 'sha256'
         $entity->senha = \Cake\Utility\Security::hash($entity->senha,'sha256');
         // debug($entity);
         // exit();

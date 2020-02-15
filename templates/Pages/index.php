@@ -61,7 +61,15 @@ $this->disableAutoLayout();
                         <a class="nav-link texto-menu contato" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link img_login texto-menu" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
+                        <a class="nav-link img_login texto-menu" href="#">
+                            <?php
+                                echo $this->Html->link(
+                                    $this->Html->image("../img/login-icon.png", ["alt" => "Login"]),
+                                    "/login",
+                                    ['escape' => false]
+                                );
+                            ?>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-sm btn-outline-secondary" href="#simulacao">Faça sua simulação</a>
@@ -428,7 +436,11 @@ $this->disableAutoLayout();
             <div class="col-sm-7 formulario-simulacao">
                 <!-- Inicio do formulario -->
                 <?php
+                    // Instancia nova classe Interessado
                     $interessado = new Interessado();
+
+                    //  Cria form passando o objeto $interessado no submit
+                    //e com action apontando para método 'simulado' do controller 'Interessados'
                     echo $this->Form->create($interessado, [
                         'url' => [
                             'controller' => 'Interessados',
@@ -513,8 +525,12 @@ $this->disableAutoLayout();
                         ]);    
                     ?>
                 </div>
-                <?php echo $this->Form->button(__('Enviar'),['class' => 'btn-envia']); ?>
-                <?php echo $this->Form->end(); ?>
+                <?php 
+                    // Cria o botão Enviar (type padrão dele já é 'submit')
+                    // Também fecha o bloco de código do Form
+                    echo $this->Form->button(__('Enviar'),['class' => 'btn-envia']); 
+                    echo $this->Form->end();    
+                ?>
             </div>
             <!-- <div class="col-sm-1"></div> -->
         </div>
