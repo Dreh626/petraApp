@@ -7,6 +7,7 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
+
 $this->disableAutoLayout();
 
 ?>
@@ -56,7 +57,7 @@ $this->disableAutoLayout();
                         <a class="nav-link texto-menu" href="#projetos">Projetos Realizados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto-menu contato" href="#contato">Contato</a>
+                        <a class="nav-link texto-menu contato-menu" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link img_login texto-menu" href=""><img src="../img/login-icon.png" alt="Login Painel" placeholder="Login"></a>
@@ -465,7 +466,7 @@ $this->disableAutoLayout();
     </main>
     <div>
         <a href="https://api.whatsapp.com/send?phone=+5516991393556 AQUI&text=Gostaria de um orçamento Petra" target="_blank">
-            <img class="whatsapp" src="../img/whatsapp.svg" />
+            <img class="whatsapp" src="../img/whats.svg" />
         </a>
     </div>
     <!-- fim botão whats -->
