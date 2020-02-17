@@ -82,11 +82,35 @@ class InteressadosTable extends Table
         $validator
             ->decimal('metragem')
             ->requirePresence('metragem', 'create')
-            ->notEmptyString('metragem','A metragem deve ser preenchida!');
+            ->notEmptyString('metragem','A metragem deve ser preenchida!')
+            ->add('metragem', 'custom', [
+                'rule' => function ($value, $context) {
+                    if (!$value) {
+                        return false;
+                    }            
+                    if ($value < 0) {
+                        return 'A Metragem não pode ser menor que Zero!';
+                    }
+                    return true;
+                },
+                'message' => 'Metragem retornou `false`'
+            ]);
 
         $validator
             ->decimal('conta_atual')
             ->requirePresence('conta_atual', 'create')
+            ->add('conta_atual', 'custom', [
+                'rule' => function ($value, $context) {
+                    if (!$value) {
+                        return false;
+                    }            
+                    if ($value < 0) {
+                        return 'A Conta Atual não pode ser menor que Zero!';
+                    }
+                    return true;
+                },
+                'message' => 'Conta Atual retornou `false`'
+            ])
             ->notEmptyString('conta_atual');
 
         return $validator;

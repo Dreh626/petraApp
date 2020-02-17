@@ -72,7 +72,11 @@ class UsuariosController extends AppController
         $usuario = $this->Usuarios->get($id, [
             'contain' => [],
         ]);
+
+        // Zera senha quando método "edit" é chamado
+        //assim, campo senha do formulário fica em branco
         $usuario->unsetProperty('senha');
+
         if ($this->request->is(['patch', 'post', 'put'])) {
             $usuario = $this->Usuarios->patchEntity($usuario, $this->request->getData());
             if ($this->Usuarios->save($usuario)) {
@@ -106,12 +110,37 @@ class UsuariosController extends AppController
     }
 
     public function login(){
+        //Se a requisição vier via POST
+        if ($this->request->is('post')){
 
+            // Recupera os dados da requisição
+            $dados = $this->request->getData();
+
+            // Monta query para buscar valores
+            // $dados['login'] é respectivo ao campo de nome 'login' do Form
+            // Tivemos de desencriptar a senha para realizar o Login, senão retorna sempre null
+            // Usa o '->first()' para parar no primeiro encontrado apenas
+            $usuario = $this->Usuarios->find('all')
+                        ->where(['login' => $dados['login']])
+                        ->where(['senha' => \Cake\Utility\Security::hash($dados['senha'],'sha256')])
+                        ->first();
+
+            if ($usuario){ // Se encontrou usuário
+                // Método setUser do componente Auth do Cake salva o usuario logado na sessão
+                $this->Auth->setUser($usuario);
+                return $this->redirect('/usuarios/index');
+            } 
+            else{ // Senão (Se não encontrou usuário)
+                $this->Flash->error(__('E-mail ou senha inválidos! Por favor, tente novamente.'));
+            }
+
+        }
     }
 
     public function logout()
     {
-
+        //  Chama o componente Auth do Cake para logout
+        return $this->redirect($this->Auth->logout());
     }
 
 }

@@ -224,8 +224,8 @@ return [
         ],
         'transportPetra' => [
             'className' => 'Smtp',
-            'host' => 'smtp.gmail.com',
-            'port' => 587,
+            'host' => 'mail.petrasolar.com.br',
+            'port' => 465,
             'timeout' => 30,
             'username' => 'contato@petrasolar.com.br',
             'password' => '302010',
@@ -256,7 +256,7 @@ return [
         ],
         'emailPetra' => [
             'transport' => 'transportPetra',
-            'from' => ['contato@petrasolar.com.br' => 'Contato Petra Solar'],
+            'from' => ['teste@fatectq.edu.br' => 'Contato Petra Solar'],
         ],
     ],
 

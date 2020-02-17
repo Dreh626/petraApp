@@ -20,7 +20,7 @@
                     echo $this->Form->control('nome');
                     echo $this->Form->control('email');
                     echo $this->Form->control('login');
-                    echo $this->Form->control('senha');
+                    echo $this->Form->control('senha',['type' => 'password']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>

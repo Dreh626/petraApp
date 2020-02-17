@@ -18,6 +18,8 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 
+// use \Cake\Controller\Component\AuthComponent;
+
 /**
  * Application Controller
  *
@@ -49,5 +51,43 @@ class AppController extends Controller
          * see https://book.cakephp.org/4/en/controllers/components/form-protection.html
          */
         //$this->loadComponent('FormProtection');
+
+
+        
+        // /**
+        //  *   Preciso carregar o component Auth aqui na AppController
+        //  * pois ela é o controller que executa antes de tudo e,
+        //  * assim posso trabalhar com autenticação
+        //  * 
+        //  *   Parametro 'authenticate' define quais campos do meu Form 
+        //  * serão usados para autenticação(no caso: campos 'login' e 'senha')
+        //  * 
+        //  *   Parametro 'loginAction' define qual será o metodo usado para Login.
+        //  * No caso, será o método 'login' da controller 'usuarios'.
+        //  * 
+        //  *   Parametro 'logoutRedirect' define qual será o método usado para Logout.
+        //  * No caso, será o método 'logout' da controller 'usuarios'.
+        //  * 
+        //  *   Parametro 'loginRedirect' define pra onde serei redirecionado após a 
+        //  * autenticação. Poderá ser uma dashboard própria.
+        //  * 
+        // */
+        // $this->loadComponent('Auth',[
+        //     'authenticate' =>[
+        //         'Form' => [
+        //             'fields' => ['username' => 'login','password' => 'senha']
+        //         ]
+        //     ],
+        //     'loginAction' => ['controller' => 'Usuarios', 'action' => 'login'],
+        //     'logoutRedirect' => ['controller' => 'Usuarios', 'action' => 'logout'],
+        //     'loginRedirect' => ['controller' => 'Usuarios', 'action' => 'index'],
+        //     'authError' => 'Acesso negado! Realize o login para acessar o conteúdo da página!'
+        // ]);
+        // $this->Auth->setConfig('authenticate',[
+        //     AuthComponent::ALL => ['userModel' => 'usuarios']
+        // ]);
+
+
+        
     }
 }
