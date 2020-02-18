@@ -72,6 +72,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
     // Rota para Logout
     $builder->connect('/logout', ['controller' => 'Usuarios', 'action' => 'logout']);
 
+    $builder->connect('/admin', ['controller' => 'Usuarios', 'action' => 'admin']);
+
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */

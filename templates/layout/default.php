@@ -14,7 +14,11 @@
  * @var \App\View\AppView $this
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+//Recupera sessao
+$session = $this->getRequest()->getSession();
+$nome = $session->read('Auth.User.nome');
+$login = $session->read('Auth.User.login');
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,28 +48,17 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <a href="/"><img src="../../img/logo.png" /></a>
         </div>
         <div class="top-nav-links">
-            <!-- <a target="_blank" href="https://book.cakephp.org/4/">Documentation</a> -->
-            <!-- <a target="_blank" href="https://api.cakephp.org/4/">API</a> -->
-            <ul class="navbar-nav ml-auto logout">
-                <li class="nav-item">
-                    <?php
-                        echo $this->Html->link(
-                            $this->Html->image("../img/logout-icon.png", ["alt" => "Logout", 'class'=>'img_logout']),
-                            "/logout",
-                            ['escape' => false]
-                        );
-                    ?>
-                </li>
-                <li class="nav-item">
-                    <?php 
-                        echo $this->Html->link(
-                            __('Logout'),
-                            ['controller' => 'Usuarios', 'action' => 'logout']
-                        );
-                    ?>
-                </li>
-            </ul>
-
+            <?php
+                //Se existe sessão, exibe logout e Bem-vindo
+                if ($session->check("Auth")){
+                    echo "<b>Bem-vindo: <u>$nome</u></b>";
+                    echo $this->Html->link(
+                        $this->Html->image("../img/logout-icon.png", ["alt" => "Logout", 'class'=>'img_logout']),
+                        "/logout",
+                        ['escape' => false]
+                    );
+                }
+            ?>
         </div>
     </nav>
     <main class="main">

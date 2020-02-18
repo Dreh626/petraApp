@@ -109,7 +109,15 @@ class UsuariosController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function login(){
+    public function login()
+    {
+        //Recupera a sessao
+        //Se já existir, redireciona para o /admin
+        $session = $this->getRequest()->getSession();
+        if ($session->check("Auth")) {
+            $this->redirect('/admin');
+        }
+
         //Se a requisição vier via POST
         if ($this->request->is('post')){
 
@@ -128,7 +136,7 @@ class UsuariosController extends AppController
             if ($usuario){ // Se encontrou usuário
                 // Método setUser do componente Auth do Cake salva o usuario logado na sessão
                 $this->Auth->setUser($usuario);
-                return $this->redirect('/usuarios/index');
+                return $this->redirect('/admin');
             } 
             else{ // Senão (Se não encontrou usuário)
                 $this->Flash->error(__('E-mail ou senha inválidos! Por favor, tente novamente.'));
@@ -139,8 +147,18 @@ class UsuariosController extends AppController
 
     public function logout()
     {
+        // Recupera a sessao para destrui-la em seguida
+        $session = $this->getRequest()->getSession();
+        $session->destroy();
+        
         //  Chama o componente Auth do Cake para logout
         return $this->redirect($this->Auth->logout());
     }
+
+    public function admin()
+    {
+        //ainda nada definido
+    }
+
 
 }

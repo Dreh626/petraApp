@@ -109,19 +109,20 @@ main {
     width: 65px !important;
 }
 
-.logout{
+.img_logout {
+    height: 60px !important;
+    width: 50px !important;
+    margin-left: 20px;
+}
+
+/* .logout{
     text-align: center;
     list-style-type: none;
 }
 .logout li{
     padding: auto ;
     margin: auto;
-}
-
-.img_logout {
-    height: 40px !important;
-    width: 40px !important;
-}
+} */
 
 /* Botão Whats */
 .whatsapp {
