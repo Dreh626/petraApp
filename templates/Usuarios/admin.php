@@ -1,27 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetraSolar Admin</title>
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Aqui vai algo 1</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Aqui vai algo 2</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <h2>Aqui vai algo 3</h2>
-            </div>
-        </div>
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var \App\Model\Entity\Usuario $usuario
+ */
+?>
+<div class="admin content">
+    <h2>Área Administrativa<h2>
+    <div class="col-sm-12">
+        <ul>
+            <li>
+                <a class="admin-options" href="/usuarios">
+                    <img src="../img/usuarios-icon.png" alt="Gerenciar Usuarios" /> Usuários
+                </a>
+            </li>
+            <li>
+                <a class="admin-options" href="/dados-estatisticos">
+                    <img src="../img/dados-estatisticos-icon.png" alt="Gerenciar Dados Estatisticos" /> Dados Estatisticos
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a class="admin-options" href="/projetos-realizados">
+                    <img src="../img/projetos-realizados-icon.png" alt="Gerenciar Projetos Realizados" /> Projetos Realizados
+                </a>
+            </li>
+            <li>
+                <a class="admin-options" href="/interessados">
+                    <img src="../img/interessados-icon.png" alt="Gerenciar Interessados" /> Interessados
+                </a>
+            </li>
+        </ul>
     </div>
-</body>
-</html>
+</div>

@@ -30,37 +30,40 @@ $login = $session->read('Auth.User.login');
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css"> -->
 
     <?= $this->Html->css('milligram.min.css') ?>
     <?= $this->Html->css('cake.css') ?>
-
-    <?= $this->Html->css('style.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-nav">
-        <div class="top-nav-title">
-            <a href="/"><img src="../../img/logo.png" /></a>
-        </div>
-        <div class="top-nav-links">
-            <?php
-                //Se existe sessão, exibe logout e Bem-vindo
-                if ($session->check("Auth")){
-                    echo "<b>Bem-vindo: <u>$nome</u></b>";
-                    echo $this->Html->link(
-                        $this->Html->image("../img/logout-icon.png", ["alt" => "Logout", 'class'=>'img_logout']),
-                        "/logout",
-                        ['escape' => false]
-                    );
-                }
-            ?>
-        </div>
-    </nav>
+    <header>
+        <nav class="nav-admin">
+            <div id="hamburguer" class="hamburguer">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul class="nav-links">
+                <a href="/"><img src="../../img/logo.png" /></a>
+                <?php
+                    //Se existe sessão, exibe logout e Bem-vindo
+                    if ($session->check("Auth")){ 
+                ?>
+                        <li>Bem-vindo: <br><u><?php echo $nome ?></u></li>
+                        <li><a href="/" class="">Home</a></li>
+                        <li><a href="/admin" class="">Admin</a></li>
+                        <li><a href="/logout" class="">Logout</a></li>
+                <?php 
+                    }
+                ?>
+            </ul>
+        </nav>
+    </header>
     <main class="main">
         <div class="container">
             <?= $this->Flash->render() ?>

@@ -64,8 +64,8 @@ $routes->scope('/', function (RouteBuilder $builder) {
      */
     #$builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
-    $builder->connect('/', ['controller' => 'Pages', 'action' => 'display', 'index']);
-    
+    $builder->connect('/', ['controller' => 'Home', 'action' => 'display', 'index']);
+      
     // Rota para Login
     $builder->connect('/login', ['controller' => 'Usuarios', 'action' => 'login']);
     
@@ -77,7 +77,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
     /*
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    // $builder->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
     /*
      * Connect catchall routes for all controllers.

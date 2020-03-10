@@ -7,8 +7,12 @@ use Cake\Datasource\ConnectionManager;
 use Cake\Error\Debugger;
 use Cake\Http\Exception\NotFoundException;
 
-
+use Cake\ORM\Query;
+use Cake\Database\Connection;
+// use Cake\ORM\Table;
+use \App\Model\Entity\DadosEstatistico;
 use \App\Model\Entity\Interessado;
+
 
 $this->disableAutoLayout();
 
@@ -41,7 +45,7 @@ $this->disableAutoLayout();
 <body>
     <header>
         <nav id="menuHeader" class="navbar navbar-expand-lg navbar-light bg-light menu menu-edit fixed-top">
-            <a class="nav-link img_logo" href="#">
+            <a class="nav-link img_logo" href="/">
                 <img src="../img/logotipo.png" alt="logotipo" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,26 +54,20 @@ $this->disableAutoLayout();
             <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto itemMenu">
                     <li class="nav-item">
-                        <a class="nav-link texto-menu" href="#o-que-fazemos">O que fazemos?</a>
+                        <a class="nav-link"  href="#o-que-fazemos">O que fazemos?</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto-menu" href="#o-passo-a-passo">O passo-a-passo</a>
+                        <a class="nav-link" href="#o-passo-a-passo">O passo-a-passo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto-menu" href="#projetos">Projetos Realizados</a>
+                        <a class="nav-link" href="#projetos">Projetos Realizados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link texto-menu contato-menu" href="#contato">Contato</a>
+                        <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link img_login texto-menu" href="#">
-                            <?php
-                                echo $this->Html->link(
-                                    $this->Html->image("../img/login-icon.png", ["alt" => "Login"]),
-                                    "/login",
-                                    ['escape' => false]
-                                );
-                            ?>
+                        <a class="nav-link img_login" href="/login">
+                            <img src="../img/login-icon.png" alt="Login" />
                         </a>
                     </li>
                     <li class="nav-item">
@@ -190,24 +188,16 @@ $this->disableAutoLayout();
         </div>
 
         <div id="dados" class="row dados" alt="Dados Estatisticos">
-            <div class="col-sm-2 text-center"></div>
-            <div class="col-sm-2 text-center">
-                <h1>20</h1>
-                <p> toneladas de CO2 poupados.</p>
+            <!-- <div class="col-sm-2 text-center"></div> -->
+            <!-- Objeto $dadosEstatisticos vindo do HomeController -->
+            <!-- é usado para fazer um foreach dos dados -->
+            <?php foreach ($dadosEstatisticos as $dadosEstatistico): ?>
+            <div class="col-sm-3 text-center">
+                <h1><?= $this->Number->format($dadosEstatistico->numero) ?></h1>
+                <p><?= h($dadosEstatistico->descricao) ?></p>
             </div>
-            <div class="col-sm-2 text-center">
-                <h1>5.000</h1>
-                <p>kw de energia gerada.</p>
-            </div>
-            <div class="col-sm-2 text-center">
-                <h1>2,5</h1>
-                <p>milhões economizados por nossos clientes.</p>
-            </div>
-            <div class="col-sm-2 text-center">
-                <h1>60</h1>
-                <p>Estudos realizados</p>
-            </div>
-            <div class="col-sm-2 text-center"></div>
+            <?php endforeach; ?>
+            <!-- <div class="col-sm-2 text-center"></div> -->
         </div>
 
         <div id="projetos" class="row projetos" alt="Projetos realizados">
@@ -224,7 +214,7 @@ $this->disableAutoLayout();
                     <div class="col-md-4" data-toggle="modal" data-target="#ModalAraraquara">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
-                                <img src="../img/araraquara.jpg" class="card-img-top" alt="..." height="220px">
+                                <img src="../img/projetos/araraquara.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Araraquara -SP</p>
@@ -259,7 +249,7 @@ $this->disableAutoLayout();
                     <div class="col-md-4" data-toggle="modal" data-target="#ModalSaoCarlos">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
-                                <img src="../img/saocarlos.jpg" class="card-img-top" alt="..." height="220px">
+                                <img src="../img/projetos/saocarlos.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">São Carlos -SP</p>
@@ -292,7 +282,7 @@ $this->disableAutoLayout();
                     <div class="col-md-4" data-toggle="modal" data-target="#ModalSorocaba">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
-                                <img src="../img/sorocaba.gif" class="card-img-top" alt="..." height="220px">
+                                <img src="../img/projetos/sorocaba.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Sorocaba -SP</p>
@@ -324,7 +314,7 @@ $this->disableAutoLayout();
                     <div class="col-md-4" data-toggle="modal" data-target="#ModalRP">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
-                                <img src="../img/ribeiraopreto.jpg" class="card-img-top" alt="..." height="220px">
+                                <img src="../img/projetos/ribeiraopreto.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Ribeirão Preto -SP</p>
@@ -356,7 +346,7 @@ $this->disableAutoLayout();
                     <div class="col-md-4" data-toggle="modal" data-target="#ModalCampinas">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
-                                <img src="../img/campinas.jpg" class="card-img-top" alt="..." height="220px">
+                                <img src="../img/projetos/campinas.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Campinas -SP</p>
@@ -389,7 +379,7 @@ $this->disableAutoLayout();
                     <div class="col-md-4" data-toggle="modal" data-target="#ModalMatao">
                         <div class="card shadow-sm">
                             <div class="card" style="width: 100%;">
-                                <img src="../img/matao.jpg" class="card-img-top" alt="..." height="220px">
+                                <img src="../img/projetos/matao.jpg" class="card-img-top" alt="..." height="220px">
                             </div>
                         </div>
                         <p class="card-text text-center">Matão -SP</p>
@@ -553,7 +543,7 @@ $this->disableAutoLayout();
                         <h2>Fale Conosco:<h2>
                     </li>
                     <li><img src="./img/email-icon.png" alt="E-mail" /> contato@petrasolar.com.br</li>
-                    <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DD) xxxx-xxxx</li>
+                    <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DDD) xxxx-xxxx</li>
                     <li><img src="./img/whatsapp-icon.png" alt="Whatsapp" /> (16) 99139-3556</li>
                 </ul>
             </div>

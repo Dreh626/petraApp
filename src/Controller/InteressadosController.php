@@ -129,7 +129,7 @@ class InteressadosController extends AppController
 
                 $this->Flash->success(__('Simulação enviada com sucesso.'));
                 
-                return $this->redirect(['controller' => 'Pages', 'action' => 'index']);
+                return $this->redirect(['controller' => 'Home', 'action' => 'display', 'index']);
             }
             $this->Flash->error(__('Sua solicitação de Simulação não pode ser enviada! Por favor, tente novamente.'));
         }

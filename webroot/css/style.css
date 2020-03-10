@@ -46,13 +46,13 @@ main {
     color: rgb(250, 250, 250) !important;
 }
 
-.menu .texto-menu{
+/* .texto-menu{
     padding-top: 5% !important ;
-}
+} */
 
-.contato-menu{
+/* .contato-menu{
     margin-top: 4.2%;
-}
+} */
 .menu a img {
     height: 100%;
     width: 65%;
@@ -62,9 +62,9 @@ main {
 .menu .btn {
     background-color: rgb(221, 95, 6) !important;
     color: rgb(250, 250, 250) !important;
-    margin: 10px 0px !important;
+    /* margin: 0px 0px !important; */
     border: hidden !important;
-    height: 60%;
+    height: 100%;
     width: 150px;
     padding: 1%;
 }
@@ -110,9 +110,9 @@ main {
 }
 
 .img_logout {
-    height: 60px !important;
-    width: 50px !important;
-    margin-left: 20px;
+    height: 50px !important;
+    width: 40px !important;
+    margin-left: 10px;
 }
 
 /* .logout{

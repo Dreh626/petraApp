@@ -24,6 +24,8 @@ use Cake\View\Exception\MissingTemplateException;
 
 use Cake\Controller\Controller;
 
+use Cake\ORM\TableRegistry;
+
 /**
  * Static content controller
  *
@@ -31,7 +33,7 @@ use Cake\Controller\Controller;
  *
  * @link https://book.cakephp.org/4/en/controllers/pages-controller.html
  */
-class PagesController extends AppController
+class HomeController extends AppController
 {
     /**
      * Displays a view
@@ -45,6 +47,7 @@ class PagesController extends AppController
      *   be found and not in debug mode.
      * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
+
     public function display(...$path): ?Response
     {
         if (!$path) {
@@ -61,9 +64,17 @@ class PagesController extends AppController
         if (!empty($path[1])) {
             $subpage = $path[1];
         }
+        
         $this->set(compact('page', 'subpage'));
 
         try {
+
+            $dados = TableRegistry::getTableLocator()->get('DadosEstatisticos')->find();
+            $this->set("dadosEstatisticos",$dados);
+
+            $projetos = TableRegistry::getTableLocator()->get('ProjetosRealizados')->find();
+            $this->set("projetosRealizados",$dados);
+
             return $this->render(implode('/', $path));
         } catch (MissingTemplateException $exception) {
             if (Configure::read('debug')) {
@@ -74,4 +85,5 @@ class PagesController extends AppController
 
         return $this->render();
     }
+
 }
