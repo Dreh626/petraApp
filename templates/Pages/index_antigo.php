@@ -540,9 +540,11 @@ $this->disableAutoLayout();
         <!-- final <div> container-fluid -->
     </main>
     <div>
-        <a href="https://api.whatsapp.com/send?phone=+5516991393556 AQUI&text=Gostaria de um orçamento Petra" target="_blank">
+    <!-- Whats -->
+        <!-- <a href="https://api.whatsapp.com/send?phone=+5516991393556 AQUI&text=Gostaria de um orçamento Petra" target="_blank">
             <img class="whatsapp" src="../img/whats.svg" />
-        </a>
+        </a> -->
+        
     </div>
     <!-- fim botão whats -->
     <footer>
