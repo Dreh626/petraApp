@@ -68,12 +68,14 @@ class HomeController extends AppController
         $this->set(compact('page', 'subpage'));
 
         try {
-
+            
+            // Dou um get()->find() para trazer todos os dados estatisticos da tabela
             $dados = TableRegistry::getTableLocator()->get('DadosEstatisticos')->find();
-            $this->set("dadosEstatisticos",$dados);
+            $this->set("dadosEstatisticos",$dados); // Passa pra view os dados no objeto "dadosEstatisticos"
 
+            // Dou um get()->find() para trazer todos os projetos realizados da tabela
             $projetos = TableRegistry::getTableLocator()->get('ProjetosRealizados')->find();
-            $this->set("projetosRealizados",$dados);
+            $this->set("projetosRealizados",$projetos); // Passa pra view os dados no objeto "projetosRealizados"
 
             return $this->render(implode('/', $path));
         } catch (MissingTemplateException $exception) {

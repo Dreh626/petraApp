@@ -287,6 +287,10 @@ main {
     margin: 30px 30px 30px 30px;
 }
 
+.card-text {
+    color: rgb(250, 250, 250) !important;
+}
+
 /*Simulação*/
 .simulacao {
     font-family: Tahoma, 'Segoe UI', Geneva, Verdana, sans-serif;
