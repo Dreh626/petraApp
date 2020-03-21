@@ -24,7 +24,12 @@ use Cake\View\Exception\MissingTemplateException;
 
 use Cake\Controller\Controller;
 
+// Importa TableRegistry para query de dados no banco
 use Cake\ORM\TableRegistry;
+
+// Importa MailerAwareTrait para enviar e-mail
+use Cake\Mailer\MailerAwareTrait;
+
 
 /**
  * Static content controller
@@ -35,6 +40,38 @@ use Cake\ORM\TableRegistry;
  */
 class HomeController extends AppController
 {
+
+    /**
+     * metodo simulacao
+     *
+     * Chamada pelo botão enviar na pagina principal do site.
+     * Responsável por salvar os dados do usuário no Banco e enviar e-mail de novo interessado.
+     */
+    // usa classe MailerAwareTrait para o envio de e-mail
+    use MailerAwareTrait;
+    public function simulacao()
+    {
+        // Em um método do controller.
+        $this->loadModel('Interessados');
+        $interessado = $this->Interessados->newEmptyEntity();
+        if ($this->request->is('post')) {
+            $interessado = $this->Interessados->patchEntity($interessado, $this->request->getData());
+            if ($this->Interessados->save($interessado)) {
+
+                //  Envia e-mail através do getMailer para o InteressadosMailer, 
+                //chamando a função novoInteressado e passando o objeto $interessado
+                $this->getMailer('Interessados')->send('novoInteressado', [$interessado]);
+
+                $this->Flash->success(__('Simulação enviada com sucesso.'));
+                
+                return $this->redirect(['controller' => 'Home', 'action' => 'display', 'index']);
+            }
+            $this->Flash->error(__('Sua solicitação de Simulação não pode ser enviada! Por favor, tente novamente.'));
+        }
+        $this->set(compact('interessado'));
+    }
+
+
     /**
      * Displays a view
      *

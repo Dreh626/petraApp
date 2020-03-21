@@ -29,6 +29,7 @@ $this->disableAutoLayout();
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->css('cake.css') ?>
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('style.css') ?>
     <?= $this->Html->script('jquery-3.4.1.slim.min.js') ?>
@@ -262,6 +263,10 @@ $this->disableAutoLayout();
                 </h2>
             </div>
             <div class="col-sm-7 formulario-simulacao">
+
+                <!-- Flash messages da Simulacao -->
+                <?= $this->Flash->render() ?>
+
                 <!-- Inicio do formulario -->
                 <?php
                     // Instancia nova classe Interessado
@@ -271,7 +276,7 @@ $this->disableAutoLayout();
                     //e com action apontando para método 'simulado' do controller 'Interessados'
                     echo $this->Form->create($interessado, [
                         'url' => [
-                            'controller' => 'Interessados',
+                            'controller' => 'Home',
                             'action' => 'simulacao'
                         ]
                     ]);

@@ -224,15 +224,11 @@ return [
         ],
         'transportPetra' => [
             'className' => 'Smtp',
-            // 'host' => 'mail.petrasolar.com.br',
-            'host' => 'smtp.gmail.com',
-            // 'port' => 465,
-            'port' => 587,
+            'host' => 'mail.petrasolar.com.br',
+            'port' => 465,
             'timeout' => 30,
-            // 'username' => 'contato@petrasolar.com.br',
-            'username' => 'teste@fatectq.edu.br',
-            // 'password' => '302010',
-            'password' => 'teste@123',
+            'username' => 'contato@petrasolar.com.br',
+            'password' => '302010',
             'client' => null,
             'tls' => true,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
@@ -260,7 +256,7 @@ return [
         ],
         'emailPetra' => [
             'transport' => 'transportPetra',
-            'from' => ['teste@fatectq.edu.br' => 'Contato Petra Solar'],
+            'from' => ['contato@petrasolar.com.br' => 'Contato Petra Solar'],
         ],
     ],
 

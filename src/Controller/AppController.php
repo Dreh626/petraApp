@@ -84,7 +84,7 @@ class AppController extends Controller
             'authError' => 'Você deve fazer o login para acessar a área administrativa!',
             'loginError' => 'Usuário ou senha incorretos!'
         ]);
-        $this->Auth->allow(array("display"));
+        $this->Auth->allow(['display', 'simulacao']);
         $this->Auth->setConfig('authenticate',[
             AuthComponent::ALL => ['userModel' => 'Usuarios']
         ]);
