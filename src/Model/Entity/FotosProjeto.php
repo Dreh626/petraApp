@@ -6,16 +6,17 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * ProjetosRealizado Entity
+ * FotosProjeto Entity
  *
  * @property int $id
  * @property string $nome
- * @property string $cidade
- * @property string $uf
  * @property string $descricao
- * @property string $banner
+ * @property string $foto
+ * @property int $projeto_id
+ *
+ * @property \App\Model\Entity\ProjetosRealizado $projetos_realizado
  */
-class ProjetosRealizado extends Entity
+class FotosProjeto extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -28,9 +29,9 @@ class ProjetosRealizado extends Entity
      */
     protected $_accessible = [
         'nome' => true,
-        'cidade' => true,
-        'uf' => true,
         'descricao' => true,
-        'banner' => true,
+        'foto' => true,
+        'projeto_id' => true,
+        'projetos_realizado' => true,
     ];
 }

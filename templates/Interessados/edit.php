@@ -11,7 +11,7 @@
             <?= $this->Form->postLink(
                 __('Deletar'),
                 ['action' => 'delete', $interessado->id],
-                ['confirm' => __('Tem certeza que quer deletar # {0}?', $interessado->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Tem certeza que quer deletar # {0}?', $interessado->nome), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Interessados'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>

@@ -16,8 +16,12 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="interessados view content">
-            <h3><?= h($interessado->id) ?></h3>
+            <h3>Interessado</h3>
             <table>
+                <tr>
+                    <th><?= __('Id') ?></th>
+                    <td><?= $this->Number->format($interessado->id) ?></td>
+                </tr>
                 <tr>
                     <th><?= __('Nome') ?></th>
                     <td><?= h($interessado->nome) ?></td>
@@ -37,10 +41,6 @@
                 <tr>
                     <th><?= __('Tipo Instalacao') ?></th>
                     <td><?= h($interessado->tipo_instalacao) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($interessado->id) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Metragem') ?></th>

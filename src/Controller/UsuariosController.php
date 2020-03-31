@@ -19,7 +19,7 @@ class UsuariosController extends AppController
      */
     public function index()
     {
-        $usuarios = $this->paginate($this->Usuarios);
+        $usuarios = $this->paginate($this->Usuarios,['limit' => 10]);
 
         $this->set(compact('usuarios'));
     }

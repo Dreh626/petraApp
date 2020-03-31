@@ -16,8 +16,12 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="usuarios view content">
-            <h3><?= h($usuario->id) ?></h3>
+            <h3>Usuário</h3>
             <table>
+                <tr>
+                    <th><?= __('Id') ?></th>
+                    <td><?= $this->Number->format($usuario->id) ?></td>
+                </tr>
                 <tr>
                     <th><?= __('Nome') ?></th>
                     <td><?= h($usuario->nome) ?></td>
@@ -29,10 +33,6 @@
                 <tr>
                     <th><?= __('Login') ?></th>
                     <td><?= h($usuario->login) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($usuario->id) ?></td>
                 </tr>
             </table>
         </div>

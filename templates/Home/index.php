@@ -213,12 +213,13 @@ $this->disableAutoLayout();
                         <div class="col-md-4" data-toggle="modal" data-target="#Modal<?= h($projetosRealizado->id) ?>" data-target="#ModalAraraquara">
                             <div class="card shadow-sm">
                                 <div class="card" style="width: 100%;">
-                                    <img src="../img/projetos/<?= h($projetosRealizado->foto) ?>" 
-                                        class="card-img-top" height="220px" alt="<?= h($projetosRealizado->cidade) ?>" 
+                                    <img src="../img/projetos/<?= h($projetosRealizado->banner) ?>" 
+                                        class="card-img-top" height="220px" alt="<?= h($projetosRealizado->nome) ?>" 
                                     />
                                 </div>
                             </div>
-                            <div class="card-text text-center"><?= h($projetosRealizado->cidade) ?></div>
+                            <div class="card-text text-center"><?= h($projetosRealizado->nome) ?></div>
+                            <div class="card-text text-center"><?= h($projetosRealizado->cidade) ?> - <?= h($projetosRealizado->uf) ?></div>
                             <br>
                         </div>
 
@@ -227,16 +228,17 @@ $this->disableAutoLayout();
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Projetos realizados em <?= h($projetosRealizado->cidade) ?></h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Fotos do Projeto: <?= h($projetosRealizado->nome) ?></h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        ...
+
                                         <!-- 
-                                            AQUI VAI UM FOREACH PRA LISTAR AS FOTOS DO RESPECTIVO PROJETO
+                                            AQUI VAI AS FOTOS
                                         -->
+
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>

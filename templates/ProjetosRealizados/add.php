@@ -18,10 +18,11 @@
             <fieldset>
                 <legend><?= __('Adicionar Projeto Realizado') ?></legend>
                 <?php
+                    echo $this->Form->control('nome');
                     echo $this->Form->control('cidade');
                     echo $this->Form->control('uf');
                     echo $this->Form->control('descricao');
-                    echo $this->Form->control('foto',['type' => 'file']);
+                    echo $this->Form->control('banner',['type' => 'file']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>

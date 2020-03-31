@@ -11,7 +11,7 @@
             <?= $this->Form->postLink(
                 __('Deletar'),
                 ['action' => 'delete', $projetosRealizado->id],
-                ['confirm' => __('Tem certeza que quer deletar # {0}?', $projetosRealizado->id), 'class' => 'side-nav-item']
+                ['confirm' => __('Tem certeza que quer deletar # {0}?', $projetosRealizado->nome), 'class' => 'side-nav-item']
             ) ?>
             <?= $this->Html->link(__('Listar Projetos Realizados'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
         </div>
@@ -23,10 +23,11 @@
             <fieldset>
                 <legend><?= __('Editar Projetos Realizado') ?></legend>
                 <?php
+                    echo $this->Form->control('nome');
                     echo $this->Form->control('cidade');
                     echo $this->Form->control('uf');
                     echo $this->Form->control('descricao');
-                    echo $this->Form->control('foto',['type' => 'file']);
+                    echo $this->Form->control('banner',['type' => 'file']);
                 ?>
             </fieldset>
             <?= $this->Form->button(__('Enviar')) ?>

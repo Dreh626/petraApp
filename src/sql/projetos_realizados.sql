@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 20-Mar-2020 às 10:16
+-- Generation Time: 30-Mar-2020 às 14:57
 -- Versão do servidor: 10.4.11-MariaDB-1:10.4.11+maria~bionic-log
 -- PHP Version: 7.2.24-0ubuntu0.18.04.2
 
@@ -28,23 +28,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `projetos_realizados` (
   `id` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
   `cidade` varchar(255) NOT NULL,
   `uf` varchar(2) NOT NULL,
   `descricao` varchar(255) NOT NULL,
-  `foto` varchar(255) NOT NULL
+  `banner` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Extraindo dados da tabela `projetos_realizados`
 --
 
-INSERT INTO `projetos_realizados` (`id`, `cidade`, `uf`, `descricao`, `foto`) VALUES
-(1, 'Araraquara', 'SP', 'Descrição do Projeto Realizado', 'araraquara.jpg'),
-(2, 'São Carlos', 'SP', 'Descrição do Projeto Realizado', 'saocarlos.jpg'),
-(3, 'Sorocaba', 'SP', 'Descrição do Projeto Realizado', 'sorocaba.jpg'),
-(4, 'Ribeirão Preto', 'SP', 'Descrição do Projeto Realizado', 'ribeiraopreto.jpg'),
-(5, 'Campinas', 'SP', 'Descrição do Projeto Realizado', 'campinas.jpg'),
-(6, 'Matão', 'SP', 'Descrição do Projeto Realizado', 'matao.jpg');
+INSERT INTO `projetos_realizados` (`id`, `nome`, `cidade`, `uf`, `descricao`, `banner`) VALUES
+(1, 'projeto1', 'Araraquara', 'SP', 'Descrição do Projeto Realizado', 'projeto1.jpg'),
+(2, 'projeto2', 'São Carlos', 'SP', 'Descrição do Projeto Realizado', 'projeto2.jpg'),
+(3, 'Projeto 3', 'Sorocaba', 'SP', 'Descrição do Projeto Realizado', 'projeto3.jpg'),
+(4, 'projeto4', 'Ribeirão Preto', 'SP', 'Descrição do Projeto Realizado', 'projeto4.jpg'),
+(5, 'projeto5', 'Campinas', 'SP', 'Descrição do Projeto Realizado', 'projeto5.jpg'),
+(6, 'projeto6', 'Matão', 'SP', 'Descrição do Projeto Realizado', 'projeto6.jpg');
 
 --
 -- Indexes for dumped tables

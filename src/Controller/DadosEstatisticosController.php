@@ -19,7 +19,7 @@ class DadosEstatisticosController extends AppController
      */
     public function index()
     {
-        $dadosEstatisticos = $this->paginate($this->DadosEstatisticos);
+        $dadosEstatisticos = $this->paginate($this->DadosEstatisticos,['limit' => 10]);
 
         $this->set(compact('dadosEstatisticos'));
     }

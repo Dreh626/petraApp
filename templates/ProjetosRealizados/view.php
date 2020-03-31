@@ -9,15 +9,23 @@
         <div class="side-nav">
             <h4 class="heading"><?= __('Ações') ?></h4>
             <?= $this->Html->link(__('Editar Projeto Realizado'), ['action' => 'edit', $projetosRealizado->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Deletar Projeto Realizado'), ['action' => 'delete', $projetosRealizado->id], ['confirm' => __('Tem certeza que quer deletar # {0}?', $projetosRealizado->id), 'class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('Deletar Projeto Realizado'), ['action' => 'delete', $projetosRealizado->id], ['confirm' => __('Tem certeza que quer deletar # {0}?', $projetosRealizado->nome), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Listar Projetos Realizados'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Novo Projeto Realizado'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
         <div class="projetosRealizados view content">
-            <h3><?= h($projetosRealizado->id) ?></h3>
+            <h3>Projeto</h3>
             <table>
+                <tr>
+                    <th><?= __('Id') ?></th>
+                    <td><?= $this->Number->format($projetosRealizado->id) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Nome') ?></th>
+                    <td><?= h($projetosRealizado->nome) ?></td>
+                </tr>
                 <tr>
                     <th><?= __('Cidade') ?></th>
                     <td><?= h($projetosRealizado->cidade) ?></td>
@@ -31,12 +39,8 @@
                     <td><?= h($projetosRealizado->descricao) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Foto') ?></th>
-                    <td><?= h($projetosRealizado->foto) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($projetosRealizado->id) ?></td>
+                    <th><?= __('Banner') ?></th>
+                    <td><?php echo $this->Html->image("/img/projetos/".$projetosRealizado->banner); ?></td>
                 </tr>
             </table>
         </div>

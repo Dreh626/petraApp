@@ -21,13 +21,20 @@
         </ul>
         <ul>
             <li>
+                <a class="admin-options" href="/interessados">
+                    <img src="../img/interessados-icon.png" alt="Gerenciar Interessados" /> Interessados
+                </a>
+            </li>
+            <li>
                 <a class="admin-options" href="/projetos-realizados">
                     <img src="../img/projetos-realizados-icon.png" alt="Gerenciar Projetos Realizados" /> Projetos Realizados
                 </a>
             </li>
+        </ul>
+        <ul>
             <li>
-                <a class="admin-options" href="/interessados">
-                    <img src="../img/interessados-icon.png" alt="Gerenciar Interessados" /> Interessados
+                <a class="admin-options" href="/fotos-projetos">
+                    <img src="../img/fotos-projetos-icon.png" alt="Gerenciar Fotos dos Projetos" /> Fotos dos Projetos
                 </a>
             </li>
         </ul>

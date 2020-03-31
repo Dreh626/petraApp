@@ -12,10 +12,11 @@
             <thead>
                 <tr>
                     <th><?= $this->Paginator->sort('id') ?></th>
+                    <th><?= $this->Paginator->sort('nome') ?></th>
                     <th><?= $this->Paginator->sort('cidade') ?></th>
                     <th><?= $this->Paginator->sort('uf') ?></th>
                     <th><?= $this->Paginator->sort('descricao') ?></th>
-                    <th><?= $this->Paginator->sort('foto') ?></th>
+                    <th><?= $this->Paginator->sort('banner') ?></th>
                     <th class="actions"><?= __('Ações') ?></th>
                 </tr>
             </thead>
@@ -23,14 +24,15 @@
                 <?php foreach ($projetosRealizados as $projetosRealizado): ?>
                 <tr>
                     <td><?= $this->Number->format($projetosRealizado->id) ?></td>
+                    <td><?= h($projetosRealizado->nome) ?></td>
                     <td><?= h($projetosRealizado->cidade) ?></td>
                     <td><?= h($projetosRealizado->uf) ?></td>
                     <td><?= h($projetosRealizado->descricao) ?></td>
-                    <td><?php echo $this->Html->image("/img/projetos/".$projetosRealizado->foto); ?></td>
+                    <td><?php echo $this->Html->image("/img/projetos/".$projetosRealizado->banner); ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('Ver'), ['action' => 'view', $projetosRealizado->id]) ?>
                         <?= $this->Html->link(__('Editar'), ['action' => 'edit', $projetosRealizado->id]) ?>
-                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $projetosRealizado->id], ['confirm' => __('Tem certeza que quer deletar # {0}?', $projetosRealizado->id)]) ?>
+                        <?= $this->Form->postLink(__('Deletar'), ['action' => 'delete', $projetosRealizado->id], ['confirm' => __('Tem certeza que quer deletar # {0}?', $projetosRealizado->nome)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

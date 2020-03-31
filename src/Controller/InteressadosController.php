@@ -19,7 +19,7 @@ class InteressadosController extends AppController
      */
     public function index()
     {
-        $interessados = $this->paginate($this->Interessados);
+        $interessados = $this->paginate($this->Interessados,['limit' => 10]);
 
         $this->set(compact('interessados'));
     }

@@ -19,7 +19,7 @@ class ProjetosRealizadosController extends AppController
      */
     public function index()
     {
-        $projetosRealizados = $this->paginate($this->ProjetosRealizados);
+        $projetosRealizados = $this->paginate($this->ProjetosRealizados,['limit' => 10]);
 
         $this->set(compact('projetosRealizados'));
     }
@@ -52,7 +52,7 @@ class ProjetosRealizadosController extends AppController
             $projetosRealizado = $this->ProjetosRealizados->patchEntity($projetosRealizado, $this->request->getData());
         
             // Recupera o arquivo para Upload
-            $file = $this->request->getData('foto');
+            $file = $this->request->getData('banner');
 
             // Se existir arquivo para Upload
             if(!empty($file)){
@@ -63,18 +63,20 @@ class ProjetosRealizadosController extends AppController
                 $file_extension = array_pop($file_name);
                 $file_tmpName = $file->getStream()->getMetadata('uri');
 
-                // Recupera cidade para renomear o arquivo
+                // Recupera nome do projeto para renomear o arquivo
+                // O nome é convertido para minusculo e sem espaços
                 // Define o caminho onde será "upado" o arquivo
                 // Define: "caminho/nome_arquivo.extensão"
-                $cidade = strtolower($projetosRealizado->cidade);
+                $nome = trim(strtolower($projetosRealizado->nome));
+                $nome = str_replace(' ', '', $nome);
                 $uploadPath = WWW_ROOT . 'img/projetos/';
-                $uploadFile = $uploadPath.$cidade.'.'.$file_extension;
+                $uploadFile = $uploadPath.$nome.'.'.$file_extension;
 
-                // Se fizer o Upload, altera o nome do arquivo para "cidade.extensao" e salva os dados
+                // Se fizer o Upload, altera o nome do arquivo para "nome.extensao" e salva os dados
                 if (move_uploaded_file($file_tmpName, $uploadFile) ){
 
-                    // Renomeia a foto para "cidade.extensao" e UpperCase na UF
-                    $projetosRealizado['foto'] = $cidade.'.'.$file_extension;
+                    // Renomeia a banner para "nome.extensao" e UpperCase na UF
+                    $projetosRealizado['banner'] = $nome.'.'.$file_extension;
                     $projetosRealizado['uf'] = strtoupper($projetosRealizado->uf);
 
                     // Se dados forem salvos
@@ -112,7 +114,7 @@ class ProjetosRealizadosController extends AppController
             $projetosRealizado = $this->ProjetosRealizados->patchEntity($projetosRealizado, $this->request->getData());
 
             // Recupera o arquivo para Upload
-            $file = $this->request->getData('foto');
+            $file = $this->request->getData('banner');
 
             // Se existir arquivo para Upload
             if(!empty($file)){
@@ -123,18 +125,20 @@ class ProjetosRealizadosController extends AppController
                 $file_extension = array_pop($file_name);
                 $file_tmpName = $file->getStream()->getMetadata('uri');
 
-                // Recupera cidade para renomear o arquivo
+                // Recupera nome do projeto para renomear o arquivo
+                // O nome é convertido para minusculo e sem espaços
                 // Define o caminho onde será "upado" o arquivo
                 // Define: "caminho/nome_arquivo.extensão"
-                $cidade = strtolower($projetosRealizado->cidade);
+                $nome = trim(strtolower($projetosRealizado->nome));
+                $nome = str_replace(' ', '', $nome);
                 $uploadPath = WWW_ROOT . 'img/projetos/';
-                $uploadFile = $uploadPath.$cidade.'.'.$file_extension;
+                $uploadFile = $uploadPath.$nome.'.'.$file_extension;
 
-                // Se fizer o Upload, altera o nome do arquivo para "cidade.extensao" e salva os dados
+                // Se fizer o Upload, altera o nome do arquivo para "nome.extensao" e salva os dados
                 if (move_uploaded_file($file_tmpName, $uploadFile) ){
 
-                    // Renomeia a foto para "cidade.extensao" e UpperCase na UF
-                    $projetosRealizado['foto'] = $cidade.'.'.$file_extension;
+                    // Renomeia a banner para "nome.extensao" e UpperCase na UF
+                    $projetosRealizado['banner'] = $nome.'.'.$file_extension;
                     $projetosRealizado['uf'] = strtoupper($projetosRealizado->uf);
 
                     if ($this->ProjetosRealizados->save($projetosRealizado)) {

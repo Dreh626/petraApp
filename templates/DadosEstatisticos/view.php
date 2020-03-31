@@ -16,15 +16,15 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="dadosEstatisticos view content">
-            <h3><?= h($dadosEstatistico->id) ?></h3>
+            <h3>Dado Estatístico</h3>
             <table>
-                <tr>
-                    <th><?= __('Descricao') ?></th>
-                    <td><?= h($dadosEstatistico->descricao) ?></td>
-                </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
                     <td><?= $this->Number->format($dadosEstatistico->id) ?></td>
+                </tr>
+                <tr>
+                    <th><?= __('Descricao') ?></th>
+                    <td><?= h($dadosEstatistico->descricao) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Numero') ?></th>

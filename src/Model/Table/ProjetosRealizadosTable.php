@@ -50,6 +50,12 @@ class ProjetosRealizadosTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
+            ->scalar('nome')
+            ->maxLength('nome', 255)
+            ->requirePresence('nome', 'create')
+            ->notEmptyString('nome','O nome deve ser preenchido!');
+
+        $validator
             ->scalar('cidade')
             ->maxLength('cidade', 255)
             ->requirePresence('cidade', 'create')
@@ -67,12 +73,29 @@ class ProjetosRealizadosTable extends Table
             ->requirePresence('descricao', 'create')
             ->notEmptyString('descricao');
 
+        // Validation por mimeType NAO ESTA FUNCIONANDO
         $validator
-            ->scalar('foto')
-            ->maxLength('foto', 255)
-            ->requirePresence('foto', 'create')
-            ->notEmptyString('foto','A foto deve ser preenchida!');
+            ->requirePresence('banner')
+            ->notEmptyString('banner','O Banner deve ser preenchido!')
+            ->add('banner', [
+                'mimeType' => [
+                    'rule' => ['mimeType',['image/png','image/jpg']],
+                    'message' => 'Imagem dever ser somente nos formatos: .png ou .jpg'
+                ],
+                'fileSize' => [
+                    'rule' => ['fileSize','<','10MB'],
+                    'message' => 'A imagem deve ter no máximo 10MB'
+                ]
+            ]);
 
         return $validator;
     }
+
+    public function buildRules(RulesChecker $rules): RulesChecker
+    {
+        $rules->add($rules->isUnique(['nome'],'O nome do projeto já existe!'));
+
+        return $rules;
+    }
+    
 }
