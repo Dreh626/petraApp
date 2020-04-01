@@ -15,5 +15,5 @@ jQuery("document").ready(function($) {
 		nav.removeClass("menu-edit");
 	  }
 	});
-});
 
+});

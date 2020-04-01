@@ -13,6 +13,8 @@ use Cake\Database\Connection;
 use \App\Model\Entity\DadosEstatistico;
 use \App\Model\Entity\Interessado;
 
+// Importa TableRegistry para query de dados no banco
+use Cake\ORM\TableRegistry;
 
 $this->disableAutoLayout();
 
@@ -210,9 +212,10 @@ $this->disableAutoLayout();
                     <!-- Objeto $projetosRealizados vindo do HomeController -->
                     <!-- é usado para fazer um foreach dos projetos -->
                     <?php foreach ($projetosRealizados as $key => $projetosRealizado): ?>
-                        <div class="col-md-4" data-toggle="modal" data-target="#Modal<?= h($projetosRealizado->id) ?>" data-target="#ModalAraraquara">
+
+                        <div class="col-md-4">
                             <div class="card shadow-sm">
-                                <div class="card" style="width: 100%;">
+                                <div class="card" style="width: 100%;" data-toggle="modal" data-target="#Modal<?= h($projetosRealizado->id) ?>">
                                     <img src="../img/projetos/<?= h($projetosRealizado->banner) ?>" 
                                         class="card-img-top" height="220px" alt="<?= h($projetosRealizado->nome) ?>" 
                                     />
@@ -225,26 +228,46 @@ $this->disableAutoLayout();
 
                         <!-- Modal -->
                         <div class="modal fade" id="Modal<?= h($projetosRealizado->id) ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
+                            <div class="modal-dialog modal-lg" role="document">
                                 <div class="modal-content">
+                                    
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Fotos do Projeto: <?= h($projetosRealizado->nome) ?></h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
+
                                     <div class="modal-body">
+                                        <div class="col-md-12">
+                                            <div class="row">
 
-                                        <!-- 
-                                            AQUI VAI AS FOTOS
-                                        -->
+                                                <?php 
+                                                    $fotosProjetos = TableRegistry::getTableLocator()->get('FotosProjetos')->find()
+                                                    ->where(['projeto_id' => $projetosRealizado->id]);
+                                                ?>
+                                                
+                                                <?php foreach ($fotosProjetos as $key => $fotosProjeto): ?>
 
-                                    </div>
+                                                    <figure class="col-md-4">
+                                                        <a class="black-text" href="../img/projetos/fotos/<?= h($fotosProjeto->foto) ?>">
+                                                            <img alt="picture" src="../img/projetos/fotos/<?= h($fotosProjeto->foto) ?>" class="img-fluid">
+                                                            <h4 class="text-center"><?= h($fotosProjeto->nome) ?></h4>
+                                                        </a>
+                                                    </figure>
+
+                                                <?php endforeach; ?>
+                                                
+                                            </div><!-- FIM div row -->
+                                        </div><!-- FIM div col -->
+                                    </div><!-- FIM modal-body -->
+
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-danger" data-dismiss="modal">Sair</button>
                                     </div>
-                                </div>
-                            </div>
+
+                                </div><!-- FIM modal-content -->
+                            </div><!-- FIM modal-dialog -->
                         </div><!-- Fim Modal -->
                         
                     <?php endforeach; ?>

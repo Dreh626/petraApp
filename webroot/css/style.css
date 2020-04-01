@@ -287,6 +287,10 @@ main {
     margin: 30px 30px 30px 30px;
 }
 
+.card {
+    cursor: pointer;
+}
+
 .card-text {
     color: rgb(250, 250, 250) !important;
 }

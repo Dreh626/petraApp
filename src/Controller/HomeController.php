@@ -71,6 +71,21 @@ class HomeController extends AppController
         $this->set(compact('interessado'));
     }
 
+    
+    // /**
+    //  * metodo mostraFotos
+    //  *
+    //  * Recebe o id do projeto e chama as fotos daquele respectivo projeto
+    //  */
+    // public function mostraFotos($projeto_id = null){
+
+    //     // Dou um get()->find() para trazer as fotos cujo id for igual ao id do projeto
+    //     $fotos = TableRegistry::getTableLocator()->get('FotosProjetos')->find()
+    //     ->where(['id' => $projeto_id]);
+    //     $this->set("fotosProjetos",$fotos); // Passa pra view os dados de "fotosProjetos"
+
+    // }
+
 
     /**
      * Displays a view
