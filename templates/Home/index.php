@@ -74,7 +74,7 @@ $this->disableAutoLayout();
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-sm btn-outline-secondary" href="#simulacao">Faça sua simulação</a>
+                        <a class="btn btn-sm btn-outline-secondary" href="#simulacao">Quero um Orçamento</a>
                     </li>
                 </ul>
             </div>
@@ -281,8 +281,7 @@ $this->disableAutoLayout();
         <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
             <div class="col-sm-4 texto-simulacao">
                 <h2>
-                    <p>Faça Sua Simulação<br>
-                        e econimize até <br>
+                    <p>Econimize até <br>
                         95% em sua conta <br>
                         de energia.
                     </p>
@@ -351,7 +350,7 @@ $this->disableAutoLayout();
                         ]);
                     ?>
                 </div>
-                <div class="form-group">
+                <div class="form-group tipoMetro">
                     <?php
                         echo $this->Form->label('tipo_instalacao','Tipo de Instalação:');
                         echo $this->Form->control('tipo_instalacao', [
@@ -362,7 +361,7 @@ $this->disableAutoLayout();
                         ]);
                     ?>
                 </div>
-                <div class="form-group">
+                <div class="form-group tipoMetro">
                     <?php
                         echo $this->Form->label('metragem','Metragem da residência/empresa:');
                         echo $this->Form->control('metragem', [
@@ -468,9 +467,11 @@ $this->disableAutoLayout();
                     <li>
                         <h2>Fale Conosco:<h2>
                     </li>
-                    <li><img src="./img/email-icon.png" alt="E-mail" /> contato@petrasolar.com.br</li>
+                    <li><img src="./img/emailIcon.svg" alt="E-mail" /> contato@petrasolar.com.br</li>
                     <!-- <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DDD) xxxx-xxxx</li> -->
-                    <li><img src="./img/whatsapp-icon.png" alt="Whatsapp" /> (16) 99139-3556</li>
+                    <li><img src="./img/whatsIcon.svg" alt="Whatsapp" /><a href="https://api.whatsapp.com/send?phone=5516991393556&text=Desejo%20um%20or%C3%A7amento%20Petra" class="icons_social"> (16) 99139-3556</a></li>
+                    <li><img src="./img/instaIcon.svg" alt="Instagram" /><a href="https://www.instagram.com/petraesolar/" class="icons_social">@petrasolar</a></i></li>
+                    <li><img src="./img/faceIcon.svg" alt="Facebook" /><a href="https://www.facebook.com/petraenergiasolar/" class="icons_social">@petraenergiasolar </a></i></li>
                 </ul>
             </div>
         </div>
