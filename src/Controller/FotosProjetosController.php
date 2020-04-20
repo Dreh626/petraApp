@@ -84,7 +84,7 @@ class FotosProjetosController extends AppController
                     // Define o caminho onde será "upado" o arquivo
                     // Define: "caminho/nome_arquivo.extensão"
                     $nomeFoto = $nome.'-'.$projeto->nome;
-                    $uploadPath = WWW_ROOT . 'img/projetos/fotos/';
+                    $uploadPath = WWW_ROOT . '/img/projetos/fotos/';
                     $uploadFile = $uploadPath.$nomeFoto.'.'.$file_extension;
 
                     // Renomeia a foto para "nome.extensao"
@@ -170,7 +170,7 @@ class FotosProjetosController extends AppController
                     // Define o caminho onde será "upado" o arquivo
                     // Define: "caminho/nome_arquivo.extensão"
                     $nomeFoto = $nome.'-'.$projeto->nome;
-                    $uploadPath = WWW_ROOT . 'img/projetos/fotos/';
+                    $uploadPath = WWW_ROOT . '/img/projetos/fotos/';
                     $uploadFile = $uploadPath.$nomeFoto.'.'.$file_extension;
 
                     // Renomeia a foto para "nome.extensao"

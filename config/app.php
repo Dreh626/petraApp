@@ -225,7 +225,7 @@ return [
         'transportPetra' => [
             'className' => 'Smtp',
             'host' => 'mail.petrasolar.com.br',
-            'port' => 465,
+            'port' => 587,
             'timeout' => 30,
             'username' => 'contato@petrasolar.com.br',
             'password' => '302010',
@@ -348,7 +348,7 @@ return [
         	//'port' => 'non_standard_port_number',
 	        'username' => 'magdiel',
        		'password' => 'magdiel',
-	        'database' => 'petraBD',
+	        'database' => 'petrae09_petraDB',
         	//'encoding' => 'utf8mb4',
 	        'timezone' => 'UTC',
        		'flags' => [],

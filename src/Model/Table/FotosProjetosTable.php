@@ -65,8 +65,7 @@ class FotosProjetosTable extends Table
         $validator
             ->scalar('descricao')
             ->maxLength('descricao', 255)
-            ->requirePresence('descricao', 'create')
-            ->notEmptyString('descricao');
+            ->allowEmptyString('descricao');
 
         $validator
             ->integer('projeto_id')

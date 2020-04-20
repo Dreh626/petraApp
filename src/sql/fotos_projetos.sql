@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 31-Mar-2020 às 18:19
+-- Generation Time: 02-Abr-2020 às 10:29
 -- Versão do servidor: 10.4.11-MariaDB-1:10.4.11+maria~bionic-log
 -- PHP Version: 7.2.24-0ubuntu0.18.04.2
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `petraBD`
+-- Database: `petraDB`
 --
 
 -- --------------------------------------------------------

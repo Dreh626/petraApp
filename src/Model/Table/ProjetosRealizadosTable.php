@@ -71,7 +71,7 @@ class ProjetosRealizadosTable extends Table
             ->scalar('descricao')
             ->maxLength('descricao', 255)
             ->requirePresence('descricao', 'create')
-            ->notEmptyString('descricao');
+            ->notEmptyString('descricao','Uma descrição deve ser preenchida!');
 
         // Validation por mimeType NAO ESTA FUNCIONANDO
         $validator

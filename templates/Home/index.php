@@ -157,7 +157,7 @@ $this->disableAutoLayout();
                 <h1>
                     <p>O que fazemos?</p>
                 </h1>
-                <p>A Petra Solar é auma empresa que realiza projetos e instalação de painéis
+                <p>A Petra Solar é uma empresa que realiza projetos e instalação de painéis
                     de energia solar fotovoltaica em sua casa ou empresa.
                     <br><br>
                     Nós temos a missão de levar uma energia limpa e inesgotável para as casas

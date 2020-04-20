@@ -69,7 +69,7 @@ class ProjetosRealizadosController extends AppController
                 // Define: "caminho/nome_arquivo.extensão"
                 $nome = trim(strtolower($projetosRealizado->nome));
                 $nome = str_replace(' ', '', $nome);
-                $uploadPath = WWW_ROOT . 'img/projetos/';
+                $uploadPath = WWW_ROOT . '/img/projetos/';
                 $uploadFile = $uploadPath.$nome.'.'.$file_extension;
 
                 // Se fizer o Upload, altera o nome do arquivo para "nome.extensao" e salva os dados
@@ -131,7 +131,7 @@ class ProjetosRealizadosController extends AppController
                 // Define: "caminho/nome_arquivo.extensão"
                 $nome = trim(strtolower($projetosRealizado->nome));
                 $nome = str_replace(' ', '', $nome);
-                $uploadPath = WWW_ROOT . 'img/projetos/';
+                $uploadPath = WWW_ROOT . '/img/projetos/';
                 $uploadFile = $uploadPath.$nome.'.'.$file_extension;
 
                 // Se fizer o Upload, altera o nome do arquivo para "nome.extensao" e salva os dados
