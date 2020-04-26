@@ -281,7 +281,7 @@ $this->disableAutoLayout();
         <div id="simulacao" class="row simulacao" alt="Faça sua simulação">
             <div class="col-sm-4 texto-simulacao">
                 <h2>
-                    <p>Econimize até <br>
+                    <p>Economize até <br>
                         95% em sua conta <br>
                         de energia.
                     </p>
@@ -469,9 +469,9 @@ $this->disableAutoLayout();
                     </li>
                     <li><img src="./img/emailIcon.svg" alt="E-mail" /> contato@petrasolar.com.br</li>
                     <!-- <li><img src="./img/telefone-icon.png" alt="Telefone" /> (DDD) xxxx-xxxx</li> -->
-                    <li><img src="./img/whatsIcon.svg" alt="Whatsapp" /><a href="https://api.whatsapp.com/send?phone=5516991393556&text=Desejo%20um%20or%C3%A7amento%20Petra" class="icons_social"> (16) 99139-3556</a></li>
-                    <li><img src="./img/instaIcon.svg" alt="Instagram" /><a href="https://www.instagram.com/petraesolar/" class="icons_social">@petrasolar</a></i></li>
-                    <li><img src="./img/faceIcon.svg" alt="Facebook" /><a href="https://www.facebook.com/petraenergiasolar/" class="icons_social">@petraenergiasolar </a></i></li>
+                    <li><img src="./img/whatsIcon.svg" alt="Whatsapp" /><a href="https://api.whatsapp.com/send?phone=5516991393556&text=Desejo%20um%20or%C3%A7amento%20Petra" class="icons_social" target="_blank"> (16) 99139-3556</a></li>
+                    <li><img src="./img/instaIcon.svg" alt="Instagram" /><a href="https://www.instagram.com/petraesolar/" class="icons_social" target="_blank">@petrasolar</a></i></li>
+                    <li><img src="./img/faceIcon.svg" alt="Facebook" /><a href="https://www.facebook.com/petraenergiasolar/" class="icons_social" target="_blank">@petraenergiasolar </a></i></li>
                 </ul>
             </div>
         </div>
