@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: 30-Mar-2020 às 14:57
+-- Generation Time: 02-Abr-2020 às 10:29
 -- Versão do servidor: 10.4.11-MariaDB-1:10.4.11+maria~bionic-log
 -- PHP Version: 7.2.24-0ubuntu0.18.04.2
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `petraBD`
+-- Database: `petraDB`
 --
 
 -- --------------------------------------------------------
@@ -36,18 +36,6 @@ CREATE TABLE `projetos_realizados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
--- Extraindo dados da tabela `projetos_realizados`
---
-
-INSERT INTO `projetos_realizados` (`id`, `nome`, `cidade`, `uf`, `descricao`, `banner`) VALUES
-(1, 'projeto1', 'Araraquara', 'SP', 'Descrição do Projeto Realizado', 'projeto1.jpg'),
-(2, 'projeto2', 'São Carlos', 'SP', 'Descrição do Projeto Realizado', 'projeto2.jpg'),
-(3, 'Projeto 3', 'Sorocaba', 'SP', 'Descrição do Projeto Realizado', 'projeto3.jpg'),
-(4, 'projeto4', 'Ribeirão Preto', 'SP', 'Descrição do Projeto Realizado', 'projeto4.jpg'),
-(5, 'projeto5', 'Campinas', 'SP', 'Descrição do Projeto Realizado', 'projeto5.jpg'),
-(6, 'projeto6', 'Matão', 'SP', 'Descrição do Projeto Realizado', 'projeto6.jpg');
-
---
 -- Indexes for dumped tables
 --
 
@@ -55,7 +43,8 @@ INSERT INTO `projetos_realizados` (`id`, `nome`, `cidade`, `uf`, `descricao`, `b
 -- Indexes for table `projetos_realizados`
 --
 ALTER TABLE `projetos_realizados`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nome` (`nome`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -65,7 +54,7 @@ ALTER TABLE `projetos_realizados`
 -- AUTO_INCREMENT for table `projetos_realizados`
 --
 ALTER TABLE `projetos_realizados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
